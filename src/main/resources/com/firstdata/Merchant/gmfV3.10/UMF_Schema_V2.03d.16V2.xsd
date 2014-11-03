@@ -1,0 +1,2465 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="com/firstdata/Merchant/gmfV3.10" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="com/firstdata/Merchant/gmfV3.10" elementFormDefault="qualified" attributeFormDefault="unqualified">
+  <!-- ############################################################ -->
+  <!-- TYPE DEFINITIONS				          	 							      -->
+  <!-- ############################################################ -->
+  <!-- ##### Fixed Length Numbers ##### -->
+  <xs:simpleType name="Len1Num">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[0-9]{1,1}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Len2Num">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[0-9]{2,2}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Len3Num">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[0-9]{3,3}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Len4Num">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[0-9]{4,4}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Len5Num">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[0-9]{5,5}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Len6Num">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[0-9]{6,6}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Len8Num">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[0-9]{8,8}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Len10Num">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[0-9]{10,10}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Len12Num">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[0-9]{12,12}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Len14Num">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[0-9]{14,14}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <!-- ##### Variable Length Numbers ##### -->
+  <xs:simpleType name="Max2_9Num">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[0-9]{2,9}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Max2Num">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[0-9]{1,2}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Max3Num">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[0-9]{1,3}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Max4Num">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[0-9]{1,4}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Max5Num">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[0-9]{1,5}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Max6Num">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[0-9]{1,6}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Max7Num">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[0-9]{1,7}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Max6_8Num">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[0-9]{6,8}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Max8Num">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[0-9]{1,8}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Max9Num">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[0-9]{1,9}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Max10Num">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[0-9]{1,10}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Max12Num">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[0-9]{1,12}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Max16Num">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[0-9]{1,16}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Max19Num">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[0-9]{1,19}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <!-- ##### Fixed Length Alpha ##### -->
+  <xs:simpleType name="Len1Alpha">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[A-Za-z]{1,1}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <!-- ##### Variable Length Alpha ##### -->
+  <xs:simpleType name="Max3Alpha">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[A-Za-z]{1,3}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <!-- ##### Fixed Length AlphaNum ##### -->
+  <xs:simpleType name="Len1AN">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[0-9A-Za-z]{1,1}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Len2AN">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[0-9A-Za-z]{2,2}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Len3AN">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[0-9A-Za-z]{3,3}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Len4AN">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[0-9A-Za-z]{4,4}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Len5AN">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[0-9A-Za-z]{5,5}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Len6AN">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[0-9A-Za-z]{6,6}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Len8AN">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[0-9A-Za-z]{8,8}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Len10AN">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[0-9A-Za-z]{10,10}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Len12AN">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[0-9A-Za-z]{12,12}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Len13AN">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[0-9A-Za-z]{13,13}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Len19AN">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[0-9A-Za-z]{19,19}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Len20AN">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[0-9A-Za-z]{20,20}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <!-- ##### Variable Length AlphaNum ##### -->
+  <xs:simpleType name="Max2AN">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[0-9A-Za-z]{1,2}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Max3AN">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[0-9A-Za-z]{1,3}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Max4AN">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[0-9A-Za-z]{1,4}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Max3_4AN">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[0-9A-Za-z]{3,4}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Max4_8AN">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[0-9A-Za-z]{4,8}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Max5_13AN">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[0-9A-Za-z]{5,13}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Max6AN">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[0-9A-Za-z]{1,6}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Max7AN">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[0-9A-Za-z]{1,7}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Max8AN">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[0-9A-Za-z]{1,8}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Max8ANB">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[0-9A-Z a-z]{1,8}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Max9ANB">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[0-9A-Z a-z]{1,9}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Max9AN">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[0-9A-Za-z]{1,9}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Max10AN">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[0-9A-Za-z]{1,10}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Max12AN">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[0-9A-Za-z]{1,12}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Max15AN">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[0-9A-Za-z]{1,15}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Max16AN">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[0-9A-Za-z]{1,16}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Max19AN">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[0-9A-Za-z]{1,19}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Max20AN">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[0-9A-Za-z]{1,20}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Max22AN">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[0-9A-Za-z]{1,22}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Max25AN">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[0-9A-Za-z]{1,25}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Max2964AN">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[0-9A-Za-z]{1,2964}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <!-- ##### Fixed Length AlphaNum Special##### -->
+  <xs:simpleType name="Len3ANS">
+    <xs:restriction base="xs:string">
+      <xs:length value="3"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Len5ANS">
+    <xs:restriction base="xs:string">
+      <xs:length value="5"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Len8ANS">
+    <xs:restriction base="xs:string">
+      <xs:length value="8"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Len60ANS">
+    <xs:restriction base="xs:string">
+      <xs:length value="60"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <!-- ##### Variable Length AlphaNum Special##### -->
+  <xs:simpleType name="Max2ANS">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1"/>
+      <xs:maxLength value="2"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Max4ANS">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1"/>
+      <xs:maxLength value="4"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Max6ANS">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1"/>
+      <xs:maxLength value="6"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Max7ANS">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1"/>
+      <xs:maxLength value="7"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Max8ANS">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1"/>
+      <xs:maxLength value="8"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Max10ANS">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1"/>
+      <xs:maxLength value="10"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Max11ANS">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1"/>
+      <xs:maxLength value="11"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Max12ANS">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1"/>
+      <xs:maxLength value="12"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Max13ANS">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1"/>
+      <xs:maxLength value="13"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Max15ANS">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1"/>
+      <xs:maxLength value="15"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Max16ANS">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1"/>
+      <xs:maxLength value="16"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Max17ANS">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1"/>
+      <xs:maxLength value="17"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Max20ANS">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1"/>
+      <xs:maxLength value="20"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Max22ANS">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1"/>
+      <xs:maxLength value="22"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Max24ANS">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1"/>
+      <xs:maxLength value="24"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Max25ANS">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1"/>
+      <xs:maxLength value="25"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Max28_32ANS">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="28"/>
+      <xs:maxLength value="32"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Max30ANS">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1"/>
+      <xs:maxLength value="30"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Max32ANS">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1"/>
+      <xs:maxLength value="32"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Max35ANS">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1"/>
+      <xs:maxLength value="35"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Max37ANS">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1"/>
+      <xs:maxLength value="37"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Max40ANS">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1"/>
+      <xs:maxLength value="40"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Max50ANS">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1"/>
+      <xs:maxLength value="50"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Max76ANS">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1"/>
+      <xs:maxLength value="76"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Max80ANS">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1"/>
+      <xs:maxLength value="80"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Max100ANS">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1"/>
+      <xs:maxLength value="100"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Max113ANS">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1"/>
+      <xs:maxLength value="113"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Max255ANS">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1"/>
+      <xs:maxLength value="255"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Max998ANS">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1"/>
+      <xs:maxLength value="998"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Max999ANS">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1"/>
+      <xs:maxLength value="999"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Max3600ANS">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1"/>
+      <xs:maxLength value="3600"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <!-- ##### Other Generic Types ##### -->
+  <xs:simpleType name="Max12AmountType">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[0123456789]{1,12}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Max13AmountSignType">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[\-]{0,1}[0123456789]{1,12}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Max17AmountSignType">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[\-]{0,1}[0123456789]{1,16}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Max999HexString">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[0-9A-F]{1,999}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Len4HexString">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[0-9A-F]{4,4}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Len12HexString">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[0-9A-F]{12,12}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Len16HexString">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[0-9A-F]{16,16}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Len28Base64String">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[a-zA-Z0-9=/\+]{28,28}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Max999Base64String">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[a-zA-Z0-9=/\+]{1,999}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <!-- ##### GMF Specific Types   ##### -->
+  <xs:simpleType name="ACIType">
+    <xs:restriction base="Len1AN">
+      <xs:enumeration value="Y"/>
+      <xs:enumeration value="R"/>
+      <xs:enumeration value="A"/>
+      <xs:enumeration value="C"/>
+      <xs:enumeration value="E"/>
+      <xs:enumeration value="F"/>
+      <xs:enumeration value="K"/>
+      <xs:enumeration value="N"/>
+      <xs:enumeration value="R"/>
+      <xs:enumeration value="S"/>
+      <xs:enumeration value="T"/>
+      <xs:enumeration value="U"/>
+      <xs:enumeration value="V"/>
+      <xs:enumeration value="W"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AddAmtTypeType">
+    <xs:restriction base="Max12AN">
+      <xs:enumeration value="Cashback"/>
+      <xs:enumeration value="Surchrg"/>
+      <xs:enumeration value="Hltcare"/>
+      <xs:enumeration value="Transit"/>
+      <xs:enumeration value="RX"/>
+      <xs:enumeration value="Vision"/>
+      <xs:enumeration value="Clinical"/>
+      <xs:enumeration value="Dental"/>
+      <xs:enumeration value="Copay"/>
+      <xs:enumeration value="FirstAuthAmt"/>
+      <xs:enumeration value="PreAuthAmt"/>
+      <xs:enumeration value="TotalAuthAmt"/>
+      <xs:enumeration value="Tax"/>
+      <xs:enumeration value="Fee"/>
+      <xs:enumeration value="BegBal"/>
+      <xs:enumeration value="EndingBal"/>
+      <xs:enumeration value="AvailBal"/>
+      <xs:enumeration value="LedgerBal"/>
+      <xs:enumeration value="HoldBal"/>
+      <xs:enumeration value="OrigReqAmt"/>
+      <xs:enumeration value="OpenToBuy"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AVSResultCodeType">
+    <xs:restriction base="Len1AN">
+      <xs:enumeration value="A"/>
+      <xs:enumeration value="B"/>
+      <xs:enumeration value="C"/>
+      <xs:enumeration value="D"/>
+      <xs:enumeration value="E"/>
+      <xs:enumeration value="F"/>
+      <xs:enumeration value="G"/>
+      <xs:enumeration value="I"/>
+      <xs:enumeration value="K"/>
+      <xs:enumeration value="L"/>
+      <xs:enumeration value="M"/>
+      <xs:enumeration value="N"/>
+      <xs:enumeration value="O"/>
+      <xs:enumeration value="P"/>
+      <xs:enumeration value="R"/>
+      <xs:enumeration value="S"/>
+      <xs:enumeration value="T"/>
+      <xs:enumeration value="U"/>
+      <xs:enumeration value="W"/>
+      <xs:enumeration value="X"/>
+      <xs:enumeration value="Y"/>
+      <xs:enumeration value="Z"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="BillPymtTxnIndType">
+    <xs:restriction base="Max12AN">
+      <xs:enumeration value="Single"/>
+      <xs:enumeration value="Recurring"/>
+      <xs:enumeration value="Installment"/>
+      <xs:enumeration value="Deferred"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="CardCaptCapType">
+    <xs:restriction base="Len1Num">
+      <xs:enumeration value="0"/>
+      <xs:enumeration value="1"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="CardSeqNumType">
+    <xs:restriction base="Len3Num">
+      <xs:pattern value="[0][0-9][0-9]"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="CardTagType">
+    <xs:restriction base="Max3AN">
+      <xs:enumeration value="CC"/>
+      <xs:enumeration value="TE"/>
+      <xs:enumeration value="DS"/>
+      <xs:enumeration value="AO"/>
+      <xs:enumeration value="DB"/>
+      <xs:enumeration value="FL"/>
+      <xs:enumeration value="CS"/>
+      <xs:enumeration value="PR"/>
+      <xs:enumeration value="CK"/>
+      <xs:enumeration value="EF"/>
+      <xs:enumeration value="EC"/>
+      <xs:enumeration value="SV1"/>
+      <xs:enumeration value="SV2"/>
+      <xs:enumeration value="SV3"/>
+      <xs:enumeration value="SV4"/>
+      <xs:enumeration value="ECA"/>
+      <xs:enumeration value="WIC"/>
+      <xs:enumeration value="EK"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="CardTypeType">
+    <xs:restriction base="Max10AN">
+      <xs:enumeration value="Amex"/>
+      <xs:enumeration value="Diners"/>
+      <xs:enumeration value="Discover"/>
+      <xs:enumeration value="JCB"/>
+      <xs:enumeration value="MasterCard"/>
+      <xs:enumeration value="Visa"/>
+      <xs:enumeration value="PPayCL"/>
+      <xs:enumeration value="GiftCard"/>
+      <xs:enumeration value="Exxon"/>
+      <xs:enumeration value="CarCareOne"/>
+      <xs:enumeration value="Shell"/>
+      <xs:enumeration value="ValeroUCC"/>
+      <xs:enumeration value="GenProp"/>
+      <xs:enumeration value="Gulf"/>
+      <xs:enumeration value="Sinclair"/>
+      <xs:enumeration value="Sunoco"/>
+      <xs:enumeration value="Buypass"/>
+      <xs:enumeration value="Wex"/>
+      <xs:enumeration value="Voyager"/>
+      <xs:enumeration value="ValeroFlt"/>
+      <xs:enumeration value="FleetOne"/>
+      <xs:enumeration value="MCFleet"/>
+      <xs:enumeration value="VisaFleet"/>
+      <xs:enumeration value="FleetCor"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="CAVVResultCodeType">
+    <xs:restriction base="Len1AN">
+      <xs:enumeration value="0"/>
+      <xs:enumeration value="1"/>
+      <xs:enumeration value="2"/>
+      <xs:enumeration value="3"/>
+      <xs:enumeration value="4"/>
+      <xs:enumeration value="5"/>
+      <xs:enumeration value="6"/>
+      <xs:enumeration value="7"/>
+      <xs:enumeration value="8"/>
+      <xs:enumeration value="9"/>
+      <xs:enumeration value="A"/>
+      <xs:enumeration value="B"/>
+      <xs:enumeration value="C"/>
+      <xs:enumeration value="D"/>
+      <xs:enumeration value="I"/>
+      <xs:enumeration value="U"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="CCVErrorCodeType">
+    <xs:restriction base="Len1AN">
+      <xs:enumeration value="Y"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="CCVIndType">
+    <xs:restriction base="Max12AN">
+      <xs:enumeration value="Ntprvd"/>
+      <xs:enumeration value="Prvded"/>
+      <xs:enumeration value="Illegible"/>
+      <xs:enumeration value="NtOnCrd"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="CCVResultCodeType">
+    <xs:restriction base="Max6AN">
+      <xs:enumeration value="Match"/>
+      <xs:enumeration value="NoMtch"/>
+      <xs:enumeration value="NotPrc"/>
+      <xs:enumeration value="NotPrv"/>
+      <xs:enumeration value="NotPrt"/>
+      <xs:enumeration value="Unknwn"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ChkEntryMethodType">
+    <xs:restriction base="Len1AN">
+      <xs:enumeration value="1"/>
+      <xs:enumeration value="2"/>
+      <xs:enumeration value="3"/>
+      <xs:enumeration value="4"/>
+      <xs:enumeration value="5"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ChkSvcPvdrType">
+    <xs:restriction base="Max12AN">
+      <xs:enumeration value="TeleCheck"/>
+      <xs:enumeration value="TeleCheckECA"/>
+      <xs:enumeration value="Certegy"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ChkTypeType">
+    <xs:restriction base="Len1Alpha">
+      <xs:enumeration value="P"/>
+      <xs:enumeration value="C"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="DCCIndType">
+    <xs:restriction base="Len1AN">
+      <xs:enumeration value="0"/>
+      <xs:enumeration value="1"/>
+      <xs:enumeration value="2"/>
+      <xs:enumeration value="3"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="DevTypeIndType">
+    <xs:restriction base="Max2AN">
+      <xs:enumeration value="0"/>
+      <xs:enumeration value="1"/>
+      <xs:enumeration value="2"/>
+      <xs:enumeration value="3"/>
+      <xs:enumeration value="4"/>
+      <xs:enumeration value="5"/>
+      <xs:enumeration value="6"/>
+      <xs:enumeration value="7"/>
+      <xs:enumeration value="8"/>
+      <xs:enumeration value="9"/>
+      <xs:enumeration value="10"/>
+      <xs:enumeration value="11"/>
+      <xs:enumeration value="12"/>
+      <xs:enumeration value="13"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="DCCTimeZnType">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[\-\+]{1,1}0[123456789]{1,1}"/>
+      <xs:pattern value="[\+]{1,1}00"/>
+      <xs:pattern value="[\-\+]{1,1}1[012]{1,1}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="EBTTypeType">
+    <xs:restriction base="Max7AN">
+      <xs:enumeration value="EBTCash"/>
+      <xs:enumeration value="SNAP"/>
+      <xs:enumeration value="eWIC"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="EcommTxnIndType">
+    <xs:restriction base="Len2Num">
+      <xs:enumeration value="01"/>
+      <xs:enumeration value="02"/>
+      <xs:enumeration value="03"/>
+      <xs:enumeration value="04"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="EncrptTrgtType">
+    <xs:restriction base="Max6AN">
+      <xs:enumeration value="Track1"/>
+      <xs:enumeration value="Track2"/>
+      <xs:enumeration value="PAN"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="EncrptTypeType">
+    <xs:restriction base="Max8AN">
+      <xs:enumeration value="RSA"/>
+      <xs:enumeration value="Verifone"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="EschtblTxnType">
+    <xs:restriction base="Max3Alpha">
+      <xs:enumeration value="No"/>
+      <xs:enumeration value="Yes"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ExistingDebtIndType">
+    <xs:restriction base="Len1AN">
+      <xs:enumeration value="1"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="FBSeqType">
+    <xs:restriction base="xs:integer">
+      <xs:minInclusive value="0"/>
+      <xs:maxInclusive value="9999"/>
+      <xs:pattern value="[0-9]{4}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="FileTypeType">
+    <xs:restriction base="Max10AN">
+      <xs:enumeration value="EMV2KEY"/>
+      <xs:enumeration value="MAIL"/>
+      <xs:enumeration value="CARDTABLE"/>
+      <xs:enumeration value="DYNCRDTBL"/>
+      <xs:enumeration value="SITECFG"/>
+      <xs:enumeration value="HOSTDISC"/>
+      <xs:enumeration value="RECTXT"/>
+      <xs:enumeration value="TABLE"/>
+      <xs:enumeration value="DATETIME"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="FunCodeType">
+    <xs:restriction base="Len1AN">
+      <xs:enumeration value="R"/>
+      <xs:enumeration value="D"/>
+      <xs:enumeration value="F"/>
+      <xs:enumeration value="U"/>
+      <xs:enumeration value="N"/>
+      <xs:enumeration value="C"/>
+      <xs:enumeration value="L"/>
+      <xs:enumeration value="E"/>
+      <xs:enumeration value="M"/>
+      <xs:enumeration value="P"/>
+      <xs:enumeration value="X"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="MCMSDIType">
+    <xs:restriction base="Max15AN">
+      <xs:enumeration value="BillPayment"/>
+      <xs:enumeration value="Healthcare"/>
+      <xs:enumeration value="Transit"/>
+      <xs:enumeration value="EcomAgg"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="MrktSpecificDataIndType">
+    <xs:restriction base="Max15AN">
+      <xs:enumeration value="BillPayment"/>
+      <xs:enumeration value="Healthcare"/>
+      <xs:enumeration value="Transit"/>
+      <xs:enumeration value="EcomAgg"/>
+      <xs:enumeration value="B2B"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="NumOfProdsType">
+    <xs:restriction base="Len2Num">
+      <xs:enumeration value="01"/>
+      <xs:enumeration value="02"/>
+      <xs:enumeration value="03"/>
+      <xs:enumeration value="04"/>
+      <xs:enumeration value="05"/>
+      <xs:enumeration value="06"/>
+      <xs:enumeration value="07"/>
+      <xs:enumeration value="08"/>
+      <xs:enumeration value="09"/>
+      <xs:enumeration value="10"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="OdoType">
+    <xs:restriction base="xs:integer">
+      <xs:minInclusive value="1"/>
+      <xs:maxInclusive value="99999999"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="PartAuthrztnApprvlCapabltType">
+    <xs:restriction base="Len1Num">
+      <xs:enumeration value="0"/>
+      <xs:enumeration value="1"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="PLPOSDebitFlgType">
+    <xs:restriction base="Len1AN">
+      <xs:enumeration value="1"/>
+      <xs:enumeration value="C"/>
+      <xs:enumeration value="D"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="POSCondCodeType">
+    <xs:restriction base="Len2Num">
+      <xs:enumeration value="00"/>
+      <xs:enumeration value="01"/>
+      <xs:enumeration value="02"/>
+      <xs:enumeration value="03"/>
+      <xs:enumeration value="04"/>
+      <xs:enumeration value="05"/>
+      <xs:enumeration value="06"/>
+      <xs:enumeration value="08"/>
+      <xs:enumeration value="09"/>
+      <xs:enumeration value="59"/>
+      <xs:enumeration value="71"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="POSEntryModeChgType">
+    <xs:restriction base="Len1AN">
+      <xs:enumeration value="Y"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="POSEntryModeType">
+    <xs:restriction base="Len3Num">
+      <xs:pattern value="[0789][01234579][0-4]"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="POSOfferCapType">
+    <xs:restriction base="Max3AN">
+      <xs:enumeration value="1"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ProgramIDType">
+    <xs:restriction base="Max20AN">
+      <xs:enumeration value="InComm"/>
+      <xs:enumeration value="StoredValueSystems"/>
+      <xs:enumeration value="Solspark"/>
+      <xs:enumeration value="Blackhawk"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="PymtTypeType">
+    <xs:restriction base="Max7AN">
+      <xs:enumeration value="Credit"/>
+      <xs:enumeration value="Debit"/>
+      <xs:enumeration value="PLDebit"/>
+      <xs:enumeration value="EBT"/>
+      <xs:enumeration value="Check"/>
+      <xs:enumeration value="Prepaid"/>
+      <xs:enumeration value="PvtLabl"/>
+      <xs:enumeration value="Fleet"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="QntyType">
+    <xs:restriction base="xs:integer">
+      <xs:minInclusive value="1"/>
+      <xs:maxInclusive value="399999999"/>
+      <xs:pattern value="[0-9]{2,9}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ReqFBMaxSizeType">
+    <xs:restriction base="Len3Num">
+      <xs:pattern value="[1-9][0-9][0-9]"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ReversalIndType">
+    <xs:restriction base="Max7AN">
+      <xs:enumeration value="Timeout"/>
+      <xs:enumeration value="Void"/>
+      <xs:enumeration value="VoidFr"/>
+      <xs:enumeration value="TORVoid"/>
+      <xs:enumeration value="Partial"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="SafekeyType">
+    <xs:restriction base="Len1AN">
+      <xs:enumeration value="0"/>
+      <xs:enumeration value="1"/>
+      <xs:enumeration value="2"/>
+      <xs:enumeration value="3"/>
+      <xs:enumeration value="4"/>
+      <xs:enumeration value="5"/>
+      <xs:enumeration value="6"/>
+      <xs:enumeration value="7"/>
+      <xs:enumeration value="8"/>
+      <xs:enumeration value="9"/>
+      <xs:enumeration value="A"/>
+      <xs:enumeration value="B"/>
+      <xs:enumeration value="C"/>
+      <xs:enumeration value="D"/>
+      <xs:enumeration value="I"/>
+      <xs:enumeration value="U"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="SctyLvlType">
+    <xs:restriction base="Max15AN">
+      <xs:enumeration value="Tknizatn"/>
+      <xs:enumeration value="EncrptTknizatn"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ServLvlType">
+    <xs:restriction base="Len1AN">
+      <xs:enumeration value="F"/>
+      <xs:enumeration value="S"/>
+      <xs:enumeration value="N"/>
+      <xs:enumeration value="X"/>
+      <xs:enumeration value="O"/>
+      <xs:enumeration value="0"/>
+      <xs:enumeration value="1"/>
+      <xs:enumeration value="2"/>
+      <xs:enumeration value="3"/>
+      <xs:enumeration value="4"/>
+      <xs:enumeration value="5"/>
+      <xs:enumeration value="6"/>
+      <xs:enumeration value="7"/>
+      <xs:enumeration value="8"/>
+      <xs:enumeration value="9"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="SettleIndType">
+    <xs:restriction base="Len1Num">
+      <xs:enumeration value="1"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="SubFileTypeType">
+    <xs:restriction base="Max10AN">
+      <xs:enumeration value="BIN"/>
+      <xs:enumeration value="RULES"/>
+      <xs:enumeration value="RESTRCTION"/>
+      <xs:enumeration value="SAF"/>
+      <xs:enumeration value="PROMPT"/>
+      <xs:enumeration value="PRODUCT"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="TaxAmtCapabltType">
+    <xs:restriction base="Max2AN">
+      <xs:enumeration value="0"/>
+      <xs:enumeration value="1"/>
+      <xs:enumeration value="VB"/>
+      <xs:enumeration value="VC"/>
+      <xs:enumeration value="VP"/>
+      <xs:enumeration value="TX"/>
+      <xs:enumeration value="NA"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="TaxIndType">
+    <xs:restriction base="Len1Num">
+      <xs:enumeration value="0"/>
+      <xs:enumeration value="1"/>
+      <xs:enumeration value="2"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="TermCatCodeType">
+    <xs:restriction base="Len2Num">
+      <xs:enumeration value="00"/>
+      <xs:enumeration value="01"/>
+      <xs:enumeration value="05"/>
+      <xs:enumeration value="06"/>
+      <xs:enumeration value="08"/>
+      <xs:enumeration value="12"/>
+      <xs:enumeration value="17"/>
+      <xs:enumeration value="18"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="TermEntryCapabltType">
+    <xs:restriction base="Len2Num">
+      <xs:enumeration value="00"/>
+      <xs:enumeration value="01"/>
+      <xs:enumeration value="02"/>
+      <xs:enumeration value="03"/>
+      <xs:enumeration value="04"/>
+      <xs:enumeration value="05"/>
+      <xs:enumeration value="06"/>
+      <xs:enumeration value="07"/>
+      <xs:enumeration value="08"/>
+      <xs:enumeration value="09"/>
+      <xs:enumeration value="10"/>
+      <xs:enumeration value="11"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="TermLocIndType">
+    <xs:restriction base="Len1AN">
+      <xs:enumeration value="0"/>
+      <xs:enumeration value="1"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="TotReqDateType">
+    <xs:restriction base="Max10AN">
+      <xs:enumeration value="ShiftRPT"/>
+      <xs:enumeration value="CloseBatch"/>
+      <xs:enumeration value="CurDayRPT"/>
+      <xs:enumeration value="PrevDayRPT"/>
+      <xs:enumeration value="3rdDayRPT"/>
+      <xs:enumeration value="CloseShift"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="TxnTypeType">
+    <xs:restriction base="Max20AN">
+      <xs:enumeration value="Activation"/>
+      <xs:enumeration value="Authorization"/>
+      <xs:enumeration value="BalanceInquiry"/>
+      <xs:enumeration value="BalanceLock"/>
+      <xs:enumeration value="Cashout"/>
+      <xs:enumeration value="CashoutActiveStatus"/>
+      <xs:enumeration value="Completion"/>
+      <xs:enumeration value="FileDownload"/>
+      <xs:enumeration value="HostTotals"/>
+      <xs:enumeration value="Load"/>
+      <xs:enumeration value="PCL3AddDetail"/>
+      <xs:enumeration value="Redemption"/>
+      <xs:enumeration value="RedemptionUnlock"/>
+      <xs:enumeration value="Refund"/>
+      <xs:enumeration value="Reload"/>
+      <xs:enumeration value="Sale"/>
+      <xs:enumeration value="TAKeyRequest"/>
+      <xs:enumeration value="TATokenRequest"/>
+      <xs:enumeration value="Verification"/>
+      <xs:enumeration value="VoucherClear"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="UCAFCollectIndType">
+    <xs:restriction base="Len1AN">
+      <xs:enumeration value="0"/>
+      <xs:enumeration value="1"/>
+      <xs:enumeration value="2"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="UnitOfMsureType">
+    <xs:restriction base="Len1AN">
+      <xs:enumeration value="C"/>
+      <xs:enumeration value="G"/>
+      <xs:enumeration value="K"/>
+      <xs:enumeration value="L"/>
+      <xs:enumeration value="P"/>
+      <xs:enumeration value="Q"/>
+      <xs:enumeration value="U"/>
+      <xs:enumeration value="Z"/>
+      <xs:enumeration value="O"/>
+      <xs:enumeration value="0"/>
+      <xs:enumeration value="1"/>
+      <xs:enumeration value="2"/>
+      <xs:enumeration value="3"/>
+      <xs:enumeration value="4"/>
+      <xs:enumeration value="5"/>
+      <xs:enumeration value="6"/>
+      <xs:enumeration value="7"/>
+      <xs:enumeration value="8"/>
+      <xs:enumeration value="9"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="UnitPriceType">
+    <xs:restriction base="xs:integer">
+      <xs:minInclusive value="1"/>
+      <xs:maxInclusive value="399999999"/>
+      <xs:pattern value="[0-9]{2,9}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="UPCPLUIndType">
+    <xs:restriction base="Len1Num">
+      <xs:enumeration value="0"/>
+      <xs:enumeration value="1"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="MCSNType">
+    <xs:restriction base="xs:integer">
+      <xs:minInclusive value="1"/>
+      <xs:maxInclusive value="99"/>
+      <xs:pattern value="[0-9]{2,2}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="MCSCType">
+    <xs:restriction base="xs:integer">
+      <xs:minInclusive value="2"/>
+      <xs:maxInclusive value="99"/>
+      <xs:pattern value="[0-9]{2,2}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="FinAuthIndType">
+    <xs:restriction base="Len1Num">
+      <xs:enumeration value="0"/>
+      <xs:enumeration value="1"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="GdSoldCdType">
+    <xs:restriction base="Max4AN">
+      <xs:enumeration value="1000"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="CHFullNmResType">
+    <xs:restriction base="Len1AN">
+      <xs:enumeration value="M"/>
+      <xs:enumeration value="F"/>
+      <xs:enumeration value="L"/>
+      <xs:enumeration value="N"/>
+      <xs:enumeration value="W"/>
+      <xs:enumeration value="U"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <!-- ############################################################ -->
+  <!-- ELEMENT DEFINITIONS                                          -->
+  <!-- ############################################################ -->
+  <!-- ##### Common Group: CommonGrp ##### -->
+  <xs:element name="PymtType" type="PymtTypeType"/>
+  <xs:element name="ReversalInd" type="ReversalIndType"/>
+  <xs:element name="TxnType" type="TxnTypeType"/>
+  <xs:element name="LocalDateTime" type="Len14Num"/>
+  <xs:element name="TrnmsnDateTime" type="Len14Num"/>
+  <xs:element name="STAN" type="Len6Num"/>
+  <xs:element name="RefNum" type="Max22AN"/>
+  <xs:element name="OrderNum" type="Max15AN"/>
+  <xs:element name="TPPID" type="Len6AN"/>
+  <xs:element name="TermID" type="Max8AN"/>
+  <xs:element name="MerchID" type="Max16AN"/>
+  <xs:element name="AltMerchID" type="Max15AN"/>
+  <xs:element name="MerchCatCode" type="Len4Num"/>
+  <xs:element name="POSEntryMode" type="POSEntryModeType"/>
+  <xs:element name="POSCondCode" type="POSCondCodeType"/>
+  <xs:element name="TermCatCode" type="TermCatCodeType"/>
+  <xs:element name="TermEntryCapablt" type="TermEntryCapabltType"/>
+  <xs:element name="TxnAmt" type="Max12AmountType"/>
+  <xs:element name="TxnCrncy" type="Len3Num"/>
+  <xs:element name="TermLocInd" type="TermLocIndType"/>
+  <xs:element name="CardCaptCap" type="CardCaptCapType"/>
+  <xs:element name="ProgramID" type="ProgramIDType"/>
+  <xs:element name="GroupID" type="Max5_13AN"/>
+  <xs:element name="POSID" type="Max4Num"/>
+  <xs:element name="SettleInd" type="SettleIndType"/>
+  <xs:element name="ClerkID" type="Max6ANS"/>
+  <xs:element name="SupID" type="Max10ANS"/>
+  <xs:element name="PLPOSDebitFlg" type="PLPOSDebitFlgType"/>
+  <xs:element name="UPC" type="Max25ANS"/>
+  <!-- ##### Bill Payment Group: BillPayGrp ##### -->
+  <xs:element name="BillPymtTxnInd" type="BillPymtTxnIndType"/>
+  <xs:element name="MerchAdviceCode" type="Len2AN"/>
+  <!-- ##### Alternate Merchant Name And Address Group: AltMerchNameAndAddrGrp ##### -->
+  <xs:element name="MerchName" type="Max30ANS"/>
+  <xs:element name="MerchAddr" type="Max25ANS"/>
+  <xs:element name="MerchCity" type="Max20ANS"/>
+  <xs:element name="MerchState" type="Len2AN"/>
+  <xs:element name="MerchCnty" type="Len3AN"/>
+  <xs:element name="MerchPostalCode" type="Max9ANB"/>
+  <xs:element name="MerchCtry" type="Len3Num"/>
+  <!-- ##### Card Group: CardGrp ##### -->
+  <xs:element name="AcctNum" type="Max19Num"/>
+  <xs:element name="CardActivDate" type="Len8Num"/>
+  <xs:element name="CardExpiryDate" type="Max6_8Num"/>
+  <xs:element name="Track1Data" type="Max76ANS"/>
+  <xs:element name="Track2Data" type="Max37ANS"/>
+  <xs:element name="CardType" type="CardTypeType"/>
+  <xs:element name="AVSResultCode" type="AVSResultCodeType"/>
+  <xs:element name="CCVInd" type="CCVIndType"/>
+  <xs:element name="CCVData" type="Max3_4AN"/>
+  <xs:element name="CCVResultCode" type="CCVResultCodeType"/>
+  <!-- ##### Check Group: CheckGrp ##### -->
+  <xs:element name="MICR" type="Max113ANS"/>
+  <xs:element name="DrvLic" type="Max37ANS"/>
+  <xs:element name="StateCode" type="Len2AN"/>
+  <xs:element name="DLDateOfBirth" type="Len8Num"/>
+  <xs:element name="ChkSvcPvdr" type="ChkSvcPvdrType"/>
+  <xs:element name="ChkEntryMethod" type="ChkEntryMethodType"/>
+  <!-- ##### Check Group: TeleCheckECAGrp ##### -->
+  <xs:element name="ChkType" type="ChkTypeType"/>
+  <xs:element name="ECAProdCd" type="Max6ANS"/>
+  <xs:element name="DnlRecNum" type="Max7ANS"/>
+  <xs:element name="ECAPhnNum" type="Len10Num"/>
+  <xs:element name="ECATrcID" type="Max22ANS"/>
+  <xs:element name="ECABCN" type="Max25ANS"/>
+  <xs:element name="RespChkNum" type="Max6Num"/>
+  <xs:element name="RetChkFee" type="Max6Num"/>
+  <xs:element name="RetChkNote" type="Max100ANS"/>
+  <!-- ##### PIN Group: PINGrp ##### -->
+  <xs:element name="PINData" type="Len16HexString"/>
+  <xs:element name="KeySerialNumData" type="Len20AN"/>
+  <!-- ##### Additional Amount Group: AddtlAmtGrp ##### -->
+  <xs:element name="AddAmt" type="Max13AmountSignType"/>
+  <xs:element name="AddAmtCrncy" type="Len3Num"/>
+  <xs:element name="AddAmtType" type="AddAmtTypeType"/>
+  <xs:element name="AddAmtAcctType" type="Max15AN"/>
+  <xs:element name="HoldInfo" type="Len4AN"/>
+  <xs:element name="PartAuthrztnApprvlCapablt" type="PartAuthrztnApprvlCapabltType"/>
+  <!-- ##### EMV Group: EMVGrp ##### -->
+  <xs:element name="EMVData" type="Max999HexString"/>
+  <xs:element name="CardSeqNum" type="CardSeqNumType"/>
+  <xs:element name="XCodeResp" type="Len6AN"/>
+  <xs:element name="ServCode" type="Len3ANS"/>
+  <xs:element name="AppExpDate" type="Len6Num"/>
+  <xs:element name="CARC" type="Len1AN"/>
+  <xs:element name="ProcInd" type="Len2AN"/>
+  <xs:element name="ProcInfo" type="Len1AN"/>
+  <!-- ##### TransArmor Group: TAGrp ##### -->
+  <xs:element name="SctyLvl" type="SctyLvlType"/>
+  <xs:element name="EncrptType" type="EncrptTypeType"/>
+  <xs:element name="EncrptTrgt" type="EncrptTrgtType"/>
+  <xs:element name="KeyID" type="Max11ANS"/>
+  <xs:element name="EncrptBlock" type="Max999ANS"/>
+  <xs:element name="TknType" type="Len4AN"/>
+  <xs:element name="Tkn" type="Max19AN"/>
+  <xs:element name="SctyKeyUpdInd" type="Len1AN"/>
+  <xs:element name="TASctyKey" type="Max999Base64String"/>
+  <xs:element name="TAExpDate" type="Len4Num"/>
+  <!-- ##### OfferWise Group: OfferGrp ##### -->
+  <xs:element name="POSOfferCap" type="POSOfferCapType"/>
+  <xs:element name="OfferDesc" type="Max80ANS"/>
+  <xs:element name="OfferResInd" type="Max3AN"/>
+  <xs:element name="OfferID" type="Max20ANS"/>
+  <xs:element name="OfferProvName" type="Max20ANS"/>
+  <xs:element name="OfferAmount" type="Max12AmountType"/>
+  <xs:element name="ReceiptCopy" type="Len1Num"/>
+  <xs:element name="VarCustRctTxt" type="Max998ANS"/>
+  <xs:element name="OfferProvID" type="Max4AN"/>
+  <xs:element name="OfferPubID" type="Max4AN"/>
+  <xs:element name="OfferPubName" type="Max20ANS"/>
+  <!-- ##### Ecomm Group: EcommGrp ##### -->
+  <xs:element name="EcommTxnInd" type="EcommTxnIndType"/>
+  <xs:element name="CustSvcPhoneNumber" type="Len10Num"/>
+  <xs:element name="EcommURL" type="Max32ANS"/>
+  <xs:element name="MCSN" type="MCSNType"/>
+  <xs:element name="MCSC" type="MCSCType"/>
+  <!-- ##### Secure Group: SecrTxnGrp ##### -->
+  <xs:element name="VisaXID" type="Len28Base64String"/>
+  <xs:element name="VisaSecrTxnAD" type="Len28Base64String"/>
+  <xs:element name="CAVVResultCode" type="CAVVResultCodeType"/>
+  <xs:element name="AmexXID" type="Len28Base64String"/>
+  <xs:element name="AmexSecrAD" type="Len28Base64String"/>
+  <xs:element name="Safekey" type="SafekeyType"/>
+  <xs:element name="UCAFCollectInd" type="UCAFCollectIndType"/>
+  <xs:element name="MCSecrAD" type="Max28_32ANS"/>
+  <!-- ##### Visa Data Group: VisaGrp ##### -->
+  <xs:element name="ACI" type="ACIType"/>
+  <xs:element name="MrktSpecificDataInd" type="MrktSpecificDataIndType"/>
+  <xs:element name="ExistingDebtInd" type="ExistingDebtIndType"/>
+  <xs:element name="CardLevelResult" type="Max2ANS"/>
+  <xs:element name="SourceReasonCode" type="Len1AN"/>
+  <xs:element name="TransID" type="Max20ANS"/>
+  <xs:element name="VisaBID" type="Max10ANS"/>
+  <xs:element name="VisaAUAR" type="Len12HexString"/>
+  <xs:element name="TaxAmtCapablt" type="TaxAmtCapabltType"/>
+  <xs:element name="SpendQInd" type="Len1AN"/>
+  <!-- ##### MasterCard Data Group: MCGrp ##### -->
+  <xs:element name="BanknetData" type="Len13AN"/>
+  <xs:element name="MCMSDI" type="MCMSDIType"/>
+  <xs:element name="CCVErrorCode" type="CCVErrorCodeType"/>
+  <xs:element name="POSEntryModeChg" type="POSEntryModeChgType"/>
+  <xs:element name="TranEditErrCode" type="Len1AN"/>
+  <xs:element name="MCPOSData" type="Len12AN"/>
+  <xs:element name="DevTypeInd" type="DevTypeIndType"/>
+  <xs:element name="FinAuthInd" type="FinAuthIndType"/>
+  <!-- ##### Discover Data Group: DSGrp ##### -->
+  <xs:element name="DiscProcCode" type="Len6AN"/>
+  <xs:element name="DiscPOSEntry" type="Len4Num"/>
+  <xs:element name="DiscRespCode" type="Len2AN"/>
+  <xs:element name="DiscPOSData" type="Len13AN"/>
+  <xs:element name="DiscTransQualifier" type="Len2AN"/>
+  <xs:element name="DiscNRID" type="Max15AN"/>
+  <!-- ##### Amex Data Group: AmexGrp ##### -->
+  <xs:element name="AmExPOSData" type="Len12AN"/>
+  <xs:element name="AmExTranID" type="Max20ANS"/>
+  <xs:element name="GdSoldCd" type="GdSoldCdType"/>
+  <!-- ##### EBT Data Group: EbtGrp ##### -->
+  <xs:element name="EBTType" type="EBTTypeType"/>
+  <xs:element name="MerchFNSNum" type="Max7ANS"/>
+  <xs:element name="EBTCardSeqNum" type="Max3Num"/>
+  <xs:element name="VoucherNum" type="Max10ANS"/>
+  <!-- ##### EBT Data Group: EWICGrp ##### -->
+  <xs:element name="EBenExDt" type="Len8Num"/>
+  <!-- ##### EBT Balance InformationGroup: EWICBalInfoGrp ##### -->
+  <xs:element name="PBCatCd" type="Len2Num"/>
+  <xs:element name="PBSubCatCd" type="Len3Num"/>
+  <xs:element name="PBQty" type="Len5Num"/>
+  <!-- ##### EBT Data Group: EWICDetGrp ##### -->
+  <xs:element name="UPCPLUInd" type="UPCPLUIndType"/>
+  <xs:element name="UPCPLUData" type="Max16Num"/>
+  <xs:element name="UPCPrice" type="Len6Num"/>
+  <xs:element name="UPCQty" type="Len5Num"/>
+  <xs:element name="ActionCd" type="Len2Num"/>
+  <xs:element name="OrigPrice" type="Len6Num"/>
+  <xs:element name="OrigQty" type="Len5Num"/>
+  <!-- ##### Debit Group: DebitGrp ##### -->
+  <xs:element name="PayeePhoneNum" type="Len10Num"/>
+  <xs:element name="PayeeAcctNum" type="Max25ANS"/>
+  <xs:element name="PayeeID" type="Max40ANS"/>
+  <xs:element name="BillingInd" type="Len1AN"/>
+  <xs:element name="FPI" type="Len3AN"/>
+  <!-- ##### Purchase Card Level 2 Group PurchCardlvl2Grp ##### -->
+  <xs:element name="TaxAmt" type="Max12AmountType"/>
+  <xs:element name="TaxInd" type="TaxIndType"/>
+  <xs:element name="PurchIdfr" type="Max25ANS"/>
+  <xs:element name="PCOrderNum" type="Max17ANS"/>
+  <xs:element name="DiscntAmt" type="Max12AmountType"/>
+  <xs:element name="FrghtAmt" type="Max12AmountType"/>
+  <xs:element name="DutyAmt" type="Max12AmountType"/>
+  <xs:element name="DestPostalCode" type="Max9ANB"/>
+  <xs:element name="ShipFromPostalCode" type="Max9ANB"/>
+  <xs:element name="DestCtryCode" type="Len3Num"/>
+  <xs:element name="MerchTaxID" type="Max15ANS"/>
+  <xs:element name="ProdDesc" type="Max40ANS"/>
+  <xs:element name="PC3Add" type="Max3Num"/>
+  <!-- ##### Purchase Card Level 3 Group PurchCardlvl3Grp ##### -->
+  <xs:element name="L3ItemSeqNum" type="Max3Num"/>
+  <xs:element name="L3ItemCode" type="Max12ANS"/>
+  <xs:element name="L3ItemDesc" type="Max35ANS"/>
+  <xs:element name="L3Qty" type="Max12Num"/>
+  <xs:element name="L3UnitOfMsure" type="Max12ANS"/>
+  <xs:element name="L3UnitCost" type="Max12Num"/>
+  <xs:element name="L3ItemTot" type="Max13ANS"/>
+  <xs:element name="L3DiscntAmt" type="Max12Num"/>
+  <xs:element name="L3TaxAmt" type="Max12Num"/>
+  <xs:element name="L3TaxRt" type="Max5Num"/>
+  <!-- ##### Customer Data Group: CustInfoGrp ##### -->
+  <xs:element name="AVSBillingAddr" type="Max30ANS"/>
+  <xs:element name="AVSBillingPostalCode" type="Max9ANB"/>
+  <xs:element name="CHFirstNm" type="Max35ANS"/>
+  <xs:element name="CHLastNm" type="Max35ANS"/>
+  <xs:element name="CHFullNmRes" type="CHFullNmResType"/>
+  <!-- ##### Order Data Group: OrderGrp ##### -->
+  <xs:element name="OrderDate" type="Len6Num"/>
+  <!-- ##### Stored Value Data Group: StoredValueGrp ##### -->
+  <xs:element name="EschtblTxn" type="EschtblTxnType"/>
+  <xs:element name="CardClass" type="Max4Num"/>
+  <xs:element name="CardCost" type="Max12AmountType"/>
+  <xs:element name="FACode" type="Max8Num"/>
+  <!-- ##### Response Group: RespGrp ##### -->
+  <xs:element name="RespCode" type="Len3Num"/>
+  <xs:element name="AuthID" type="Max8ANB"/>
+  <xs:element name="AddtlRespData" type="Max50ANS"/>
+  <xs:element name="SttlmDate" type="Len4Num"/>
+  <xs:element name="AthNtwkID" type="Max3AN"/>
+  <xs:element name="ErrorData" type="Max255ANS"/>
+  <!-- ##### Original Transaction Data Group: OrigAuthGrp ##### -->
+  <xs:element name="OrigAuthID" type="Max8ANB"/>
+  <xs:element name="OrigLocalDateTime" type="Len14Num"/>
+  <xs:element name="OrigTranDateTime" type="Len14Num"/>
+  <xs:element name="OrigSTAN" type="Len6Num"/>
+  <xs:element name="OrigRespCode" type="Len3Num"/>
+  <!-- #####  Dynamic Currency Conversion Group: DCCGrpp ##### -->
+  <xs:element name="DCCInd" type="DCCIndType"/>
+  <xs:element name="DCCTimeZn" type="DCCTimeZnType"/>
+  <xs:element name="DCCAmt" type="Max12AmountType"/>
+  <xs:element name="DCCRate" type="Len8Num"/>
+  <xs:element name="DCCCrncy" type="Len3Num"/>
+  <!-- #####  Host Totals Group: HostTotGrp ##### -->
+  <xs:element name="TotReqDate" type="TotReqDateType"/>
+  <xs:element name="Password" type="Len6Num"/>
+  <xs:element name="NetSettleAmt" type="Max17AmountSignType"/>
+  <xs:element name="FeeAmt" type="Max13AmountSignType"/>
+  <!-- #####  Host Totals Details Group: HostTotDetGrp ##### -->
+  <xs:element name="CardTag" type="CardTagType"/>
+  <xs:element name="TxnCt" type="Max4Num"/>
+  <xs:element name="CardTxnAmt" type="Max13AmountSignType"/>
+  <!-- #####  Product Code Group: ProdCodeGrp ##### -->
+  <xs:element name="ServLvl" type="ServLvlType"/>
+  <xs:element name="NumOfProds" type="NumOfProdsType"/>
+  <!-- #####  Product Code Detail Group: ProdCodeDetGrp ##### -->
+  <xs:element name="NACSProdCode" type="Len3Num"/>
+  <xs:element name="UnitOfMsure" type="UnitOfMsureType"/>
+  <!--<xs:element name="Qnty" type="Max2_9Num"/>-->
+  <xs:element name="Qnty" type="QntyType"/>
+  <!--<xs:element name="UnitPrice" type="Max2_9Num"/>-->
+  <xs:element name="UnitPrice" type="UnitPriceType"/>
+  <xs:element name="ProdAmt" type="Max12AmountType"/>
+  <!-- #####  File Download Group: FileDLGrp ##### -->
+  <xs:element name="FileType" type="FileTypeType"/>
+  <xs:element name="PenFileType" type="Max10AN"/>
+  <xs:element name="SubFileType" type="SubFileTypeType"/>
+  <xs:element name="LdSeqNum" type="Max6Num"/>
+  <xs:element name="DMTblVer" type="Len5ANS"/>
+  <xs:element name="DBINTblVer" type="Len5ANS"/>
+  <xs:element name="DRuTblVer" type="Len5ANS"/>
+  <xs:element name="DReTblVer" type="Len5ANS"/>
+  <xs:element name="DSAFTblVer" type="Len5ANS"/>
+  <xs:element name="DPrTblVer" type="Len5ANS"/>
+  <xs:element name="DPdTblVer" type="Len5ANS"/>
+  <xs:element name="HMTblVer" type="Len5ANS"/>
+  <xs:element name="HBINTblVer" type="Len5ANS"/>
+  <xs:element name="HRuTblVer" type="Len5ANS"/>
+  <xs:element name="HReTblVer" type="Len5ANS"/>
+  <xs:element name="HSAFTblVer" type="Len5ANS"/>
+  <xs:element name="HPrTblVer" type="Len5ANS"/>
+  <xs:element name="HPdTblVer" type="Len5ANS"/>
+  <xs:element name="HWVer" type="Max4ANS"/>
+  <xs:element name="SWVer" type="Max8ANS"/>
+  <xs:element name="FWVer" type="Max8ANS"/>
+  <xs:element name="FunCode" type="FunCodeType"/>
+  <xs:element name="CurrFileCreationDt" type="Len14Num"/>
+  <xs:element name="FileSize" type="Max5Num"/>
+  <xs:element name="FileCRC16" type="Len4HexString"/>
+  <xs:element name="LdCtrlKey" type="Len60ANS"/>
+  <xs:element name="FBSeq" type="FBSeqType"/>
+  <xs:element name="ReqFBMaxSize" type="ReqFBMaxSizeType"/>
+  <xs:element name="ReqFileOffset" type="Max7Num"/>
+  <xs:element name="NextFileDLOffset" type="Max7Num"/>
+  <xs:element name="FBData" type="Max3600ANS"/>
+  <xs:element name="TLMerchName" type="Max24ANS"/>
+  <xs:element name="TLStNum" type="Max16ANS"/>
+  <xs:element name="TLMerchAddr" type="Max24ANS"/>
+  <xs:element name="TLMerchCity" type="Max13ANS"/>
+  <xs:element name="TLMerchState" type="Len2AN"/>
+  <xs:element name="TLMerchPostalCode" type="Max9ANB"/>
+  <xs:element name="TTDay" type="Len1Num"/>
+  <xs:element name="TTDateTime" type="Len10Num"/>
+  <xs:element name="TTCutTime" type="Len4Num"/>
+  <xs:element name="TTPassword" type="Len6Num"/>
+  <xs:element name="RctTxtStrDt" type="Len12Num"/>
+  <xs:element name="RctTxtEndDt" type="Len12Num"/>
+  <!-- #####  TABLE LOAD Group Group: TLGrp ##### -->
+  <xs:element name="TLCardType" type="Len3Num"/>
+  <!-- #####  RECEIPT TEXT DETAIL Group: RctTxtDetGrp ##### -->
+  <xs:element name="RctTxtData" type="Max20ANS"/>
+  <!-- #####  HOST DISCOUNT DETAIL Group: HostDiscDetGrp ##### -->
+  <xs:element name="HDStrDt" type="Len12Num"/>
+  <xs:element name="HDEndDt" type="Len12Num"/>
+  <xs:element name="HDCardType" type="Max10AN"/>
+  <xs:element name="HDBINBeg" type="Max12Num"/>
+  <xs:element name="HDBINEnd" type="Max12Num"/>
+  <xs:element name="HDProdCd" type="Len3Num"/>
+  <xs:element name="HDProdDiscAmt" type="Max5Num"/>
+  <xs:element name="HDDiscType" type="Len3Num"/>
+  <xs:element name="HDQtyLt" type="Max3Num"/>
+  <xs:element name="HDProgDesc" type="Max15ANS"/>
+  <!-- #####  FLEET Group: FltGrp ##### -->
+  <xs:element name="Odo" type="OdoType"/>
+  <xs:element name="VehNum" type="Max9Num"/>
+  <xs:element name="JobNum" type="Max9Num"/>
+  <xs:element name="DrvNum" type="Max9Num"/>
+  <xs:element name="FltEmpNum" type="Max10Num"/>
+  <xs:element name="LicNum" type="Max10Num"/>
+  <xs:element name="JobID" type="Max12ANS"/>
+  <xs:element name="DeptNum" type="Max12ANS"/>
+  <xs:element name="CustData" type="Max12ANS"/>
+  <xs:element name="UserID" type="Max12ANS"/>
+  <xs:element name="VehIDNum" type="Max8ANS"/>
+  <xs:element name="ServResCd" type="Max3AN"/>
+  <!-- ############################################################ -->
+  <!-- GROUP ELEMENT DEFINITIONS                                                          -->
+  <!-- ############################################################ -->
+  <!-- ##### Common Group: ##### -->
+  <xs:complexType name="CommonGrp">
+    <xs:sequence>
+      <xs:element ref="PymtType" minOccurs="0"/>
+      <xs:element ref="ReversalInd" minOccurs="0"/>
+      <xs:element ref="TxnType" minOccurs="0"/>
+      <xs:element ref="LocalDateTime" minOccurs="0"/>
+      <xs:element ref="TrnmsnDateTime" minOccurs="0"/>
+      <xs:element ref="STAN" minOccurs="0"/>
+      <xs:element ref="RefNum" minOccurs="0"/>
+      <xs:element ref="OrderNum" minOccurs="0"/>
+      <xs:element ref="TPPID" minOccurs="0"/>
+      <xs:element ref="TermID" minOccurs="0"/>
+      <xs:element ref="MerchID" minOccurs="0"/>
+      <xs:element ref="AltMerchID" minOccurs="0"/>
+      <xs:element ref="MerchCatCode" minOccurs="0"/>
+      <xs:element ref="POSEntryMode" minOccurs="0"/>
+      <xs:element ref="POSCondCode" minOccurs="0"/>
+      <xs:element ref="TermCatCode" minOccurs="0"/>
+      <xs:element ref="TermEntryCapablt" minOccurs="0"/>
+      <xs:element ref="TxnAmt" minOccurs="0"/>
+      <xs:element ref="TxnCrncy" minOccurs="0"/>
+      <xs:element ref="TermLocInd" minOccurs="0"/>
+      <xs:element ref="CardCaptCap" minOccurs="0"/>
+      <xs:element ref="ProgramID" minOccurs="0"/>
+      <xs:element ref="GroupID" minOccurs="0"/>
+      <xs:element ref="POSID" minOccurs="0"/>
+      <xs:element ref="SettleInd" minOccurs="0"/>
+      <xs:element ref="ClerkID" minOccurs="0"/>
+      <xs:element ref="SupID" minOccurs="0"/>
+      <xs:element ref="PLPOSDebitFlg" minOccurs="0"/>
+      <xs:element ref="UPC" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <!-- ##### Bill Payment Group: IndDataGrp ##### -->
+  <xs:complexType name="BillPayGrp">
+    <xs:sequence>
+      <xs:element ref="BillPymtTxnInd" minOccurs="0"/>
+      <xs:element ref="MerchAdviceCode" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <!-- ##### Alternate Merchant Name And Address Group: AltMerchNameAndAddrGrp ##### -->
+  <xs:complexType name="AltMerchNameAndAddrGrp">
+    <xs:sequence>
+      <xs:element ref="MerchName" minOccurs="0"/>
+      <xs:element ref="MerchAddr" minOccurs="0"/>
+      <xs:element ref="MerchCity" minOccurs="0"/>
+      <xs:element ref="MerchState" minOccurs="0"/>
+      <xs:element ref="MerchCnty" minOccurs="0"/>
+      <xs:element ref="MerchPostalCode" minOccurs="0"/>
+      <xs:element ref="MerchCtry" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <!-- ##### Card Data Group: CardGrp ##### -->
+  <xs:complexType name="CardGrp">
+    <xs:sequence>
+      <xs:element ref="AcctNum" minOccurs="0"/>
+      <xs:element ref="CardActivDate" minOccurs="0"/>
+      <xs:element ref="CardExpiryDate" minOccurs="0"/>
+      <xs:element ref="Track1Data" minOccurs="0"/>
+      <xs:element ref="Track2Data" minOccurs="0"/>
+      <xs:element ref="CardType" minOccurs="0"/>
+      <xs:element ref="AVSResultCode" minOccurs="0"/>
+      <xs:element ref="CCVInd" minOccurs="0"/>
+      <xs:element ref="CCVData" minOccurs="0"/>
+      <xs:element ref="CCVResultCode" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <!-- ##### Check Data Group: CheckGrp ##### -->
+  <xs:complexType name="CheckGrp">
+    <xs:sequence>
+      <xs:element ref="MICR" minOccurs="0"/>
+      <xs:element ref="DrvLic" minOccurs="0"/>
+      <xs:element ref="StateCode" minOccurs="0"/>
+      <xs:element ref="DLDateOfBirth" minOccurs="0"/>
+      <xs:element ref="ChkSvcPvdr" minOccurs="0"/>
+      <xs:element ref="ChkEntryMethod" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <!-- ##### TeleCheck ECA Group: TeleCheckECAGrp ##### -->
+  <xs:complexType name="TeleCheckECAGrp">
+    <xs:sequence>
+      <xs:element ref="ChkType" minOccurs="0"/>
+      <xs:element ref="ECAProdCd" minOccurs="0"/>
+      <xs:element ref="DnlRecNum" minOccurs="0"/>
+      <xs:element ref="ECAPhnNum" minOccurs="0"/>
+      <xs:element ref="ECATrcID" minOccurs="0"/>
+      <xs:element ref="ECABCN" minOccurs="0"/>
+      <xs:element ref="RespChkNum" minOccurs="0"/>
+      <xs:element ref="RetChkFee" minOccurs="0"/>
+      <xs:element ref="RetChkNote" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <!-- ##### PIN Data Group: PINGrp ##### -->
+  <xs:complexType name="PINGrp">
+    <xs:sequence>
+      <xs:element ref="PINData" minOccurs="0"/>
+      <xs:element ref="KeySerialNumData" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <!-- ##### Additional Amount Group: AddtlAmtGrp ##### -->
+  <xs:complexType name="AddtlAmtGrp">
+    <xs:sequence>
+      <xs:element ref="AddAmt" minOccurs="0"/>
+      <xs:element ref="AddAmtCrncy" minOccurs="0"/>
+      <xs:element ref="AddAmtType" minOccurs="0"/>
+      <xs:element ref="AddAmtAcctType" minOccurs="0"/>
+      <xs:element ref="HoldInfo" minOccurs="0"/>
+      <xs:element ref="PartAuthrztnApprvlCapablt" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <!-- ##### EMV Data Group: EMVGrp ##### -->
+  <xs:complexType name="EMVGrp">
+    <xs:sequence>
+      <xs:element ref="EMVData" minOccurs="0"/>
+      <xs:element ref="CardSeqNum" minOccurs="0"/>
+      <xs:element ref="XCodeResp" minOccurs="0"/>
+      <xs:element ref="ServCode" minOccurs="0"/>
+      <xs:element ref="AppExpDate" minOccurs="0"/>
+      <xs:element ref="CARC" minOccurs="0"/>
+      <xs:element ref="ProcInd" minOccurs="0"/>
+      <xs:element ref="ProcInfo" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <!-- ##### TransArmor Group: TAGrp ##### -->
+  <xs:complexType name="TAGrp">
+    <xs:sequence>
+      <xs:element ref="SctyLvl" minOccurs="0"/>
+      <xs:element ref="EncrptType" minOccurs="0"/>
+      <xs:element ref="EncrptTrgt" minOccurs="0"/>
+      <xs:element ref="KeyID" minOccurs="0"/>
+      <xs:element ref="EncrptBlock" minOccurs="0"/>
+      <xs:element ref="TknType" minOccurs="0"/>
+      <xs:element ref="Tkn" minOccurs="0"/>
+      <xs:element ref="SctyKeyUpdInd" minOccurs="0"/>
+      <xs:element ref="TASctyKey" minOccurs="0"/>
+      <xs:element ref="TAExpDate" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <!-- ##### OfferWise Group: OfferGrp ##### -->
+  <xs:complexType name="OfferGrp">
+    <xs:sequence>
+      <xs:element ref="POSOfferCap" minOccurs="0"/>
+      <xs:element ref="OfferDesc" minOccurs="0"/>
+      <xs:element ref="OfferResInd" minOccurs="0"/>
+      <xs:element ref="OfferID" minOccurs="0"/>
+      <xs:element ref="OfferProvName" minOccurs="0"/>
+      <xs:element ref="OfferAmount" minOccurs="0"/>
+      <xs:element ref="ReceiptCopy" minOccurs="0"/>
+      <xs:element ref="VarCustRctTxt" minOccurs="0"/>
+      <xs:element ref="OfferProvID" minOccurs="0"/>
+      <xs:element ref="OfferPubID" minOccurs="0"/>
+      <xs:element ref="OfferPubName" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <!-- ##### Ecomm Data Group: EcommGrp ##### -->
+  <xs:complexType name="EcommGrp">
+    <xs:sequence>
+      <xs:element ref="EcommTxnInd" minOccurs="0"/>
+      <xs:element ref="CustSvcPhoneNumber" minOccurs="0"/>
+      <xs:element ref="EcommURL" minOccurs="0"/>
+      <xs:element ref="MCSN" minOccurs="0"/>
+      <xs:element ref="MCSC" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <!-- ##### Secure Group: SecrTxnGrp ##### -->
+  <xs:complexType name="SecrTxnGrp">
+    <xs:sequence>
+      <xs:element ref="VisaXID" minOccurs="0"/>
+      <xs:element ref="VisaSecrTxnAD" minOccurs="0"/>
+      <xs:element ref="CAVVResultCode" minOccurs="0"/>
+      <xs:element ref="AmexXID" minOccurs="0"/>
+      <xs:element ref="AmexSecrAD" minOccurs="0"/>
+      <xs:element ref="Safekey" minOccurs="0"/>
+      <xs:element ref="UCAFCollectInd" minOccurs="0"/>
+      <xs:element ref="MCSecrAD" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <!-- ##### Visa Data Group: VisaGrp ##### -->
+  <xs:complexType name="VisaGrp">
+    <xs:sequence>
+      <xs:element ref="ACI" minOccurs="0"/>
+      <xs:element ref="MrktSpecificDataInd" minOccurs="0"/>
+      <xs:element ref="ExistingDebtInd" minOccurs="0"/>
+      <xs:element ref="CardLevelResult" minOccurs="0"/>
+      <xs:element ref="SourceReasonCode" minOccurs="0"/>
+      <xs:element ref="TransID" minOccurs="0"/>
+      <xs:element ref="VisaBID" minOccurs="0" maxOccurs="3"/>
+      <xs:element ref="VisaAUAR" minOccurs="0" maxOccurs="3"/>
+      <xs:element ref="TaxAmtCapablt" minOccurs="0"/>
+      <xs:element ref="SpendQInd" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <!-- ##### MasterCard Data Group: MCGrp ##### -->
+  <xs:complexType name="MCGrp">
+    <xs:sequence>
+      <xs:element ref="BanknetData" minOccurs="0"/>
+      <xs:element ref="MCMSDI" minOccurs="0"/>
+      <xs:element ref="CCVErrorCode" minOccurs="0"/>
+      <xs:element ref="POSEntryModeChg" minOccurs="0"/>
+      <xs:element ref="TranEditErrCode" minOccurs="0"/>
+      <xs:element ref="MCPOSData" minOccurs="0"/>
+      <xs:element ref="DevTypeInd" minOccurs="0"/>
+      <xs:element ref="FinAuthInd" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <!-- ##### Discover Data Group: DSGrp ##### -->
+  <xs:complexType name="DSGrp">
+    <xs:sequence>
+      <xs:element ref="DiscProcCode" minOccurs="0"/>
+      <xs:element ref="DiscPOSEntry" minOccurs="0"/>
+      <xs:element ref="DiscRespCode" minOccurs="0"/>
+      <xs:element ref="DiscPOSData" minOccurs="0"/>
+      <xs:element ref="DiscTransQualifier" minOccurs="0"/>
+      <xs:element ref="DiscNRID" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <!-- ##### Amex Data Group: AmexGrp ##### -->
+  <xs:complexType name="AmexGrp">
+    <xs:sequence>
+      <xs:element ref="AmExPOSData" minOccurs="0"/>
+      <xs:element ref="AmExTranID" minOccurs="0"/>
+      <xs:element ref="GdSoldCd" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <!-- ##### EBT Data Group: EbtGrp ##### -->
+  <xs:complexType name="EbtGrp">
+    <xs:sequence>
+      <xs:element ref="EBTType" minOccurs="0"/>
+      <xs:element ref="MerchFNSNum" minOccurs="0"/>
+      <xs:element ref="EBTCardSeqNum" minOccurs="0"/>
+      <xs:element ref="VoucherNum" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <!-- ##### EWIC Group: EWICGrp ##### -->
+  <xs:complexType name="EWICGrp">
+    <xs:sequence>
+      <xs:element ref="EBenExDt" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <!-- ##### EWIC Balance Information Group: EWICBalInfoGrp ##### -->
+  <xs:complexType name="EWICBalInfoGrp">
+    <xs:sequence>
+      <xs:element ref="PBCatCd" minOccurs="0"/>
+      <xs:element ref="PBSubCatCd" minOccurs="0"/>
+      <xs:element ref="PBQty" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <!-- ##### EWIC Group: EWICDetGrp ##### -->
+  <xs:complexType name="EWICDetGrp">
+    <xs:sequence>
+      <xs:element ref="UPCPLUInd" minOccurs="0"/>
+      <xs:element ref="UPCPLUData" minOccurs="0"/>
+      <xs:element ref="UPCPrice" minOccurs="0"/>
+      <xs:element ref="UPCQty" minOccurs="0"/>
+      <xs:element ref="ActionCd" minOccurs="0"/>
+      <xs:element ref="OrigPrice" minOccurs="0"/>
+      <xs:element ref="OrigQty" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <!-- ##### Debit Group: DebitGrp ##### -->
+  <xs:complexType name="DebitGrp">
+    <xs:sequence>
+      <xs:element ref="PayeePhoneNum" minOccurs="0"/>
+      <xs:element ref="PayeeAcctNum" minOccurs="0"/>
+      <xs:element ref="PayeeID" minOccurs="0"/>
+      <xs:element ref="BillingInd" minOccurs="0"/>
+      <xs:element ref="FPI" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <!-- ##### Purchase Card Level 2 Group PurchCardlvl2Grp ##### -->
+  <xs:complexType name="PurchCardlvl2Grp">
+    <xs:sequence>
+      <xs:element ref="TaxAmt" minOccurs="0"/>
+      <xs:element ref="TaxInd" minOccurs="0"/>
+      <xs:element ref="PurchIdfr" minOccurs="0"/>
+      <xs:element ref="PCOrderNum" minOccurs="0"/>
+      <xs:element ref="DiscntAmt" minOccurs="0"/>
+      <xs:element ref="FrghtAmt" minOccurs="0"/>
+      <xs:element ref="DutyAmt" minOccurs="0"/>
+      <xs:element ref="DestPostalCode" minOccurs="0"/>
+      <xs:element ref="ShipFromPostalCode" minOccurs="0"/>
+      <xs:element ref="DestCtryCode" minOccurs="0"/>
+      <xs:element ref="MerchTaxID" minOccurs="0"/>
+      <xs:element ref="ProdDesc" minOccurs="0" maxOccurs="4"/>
+      <xs:element ref="PC3Add" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <!-- ##### Purchase Card Level 3 Group PurchCardlvl3Grp ##### -->
+  <xs:complexType name="PurchCardlvl3Grp">
+    <xs:sequence>
+      <xs:element ref="L3ItemSeqNum" minOccurs="0"/>
+      <xs:element ref="L3ItemCode" minOccurs="0"/>
+      <xs:element ref="L3ItemDesc" minOccurs="0"/>
+      <xs:element ref="L3Qty" minOccurs="0"/>
+      <xs:element ref="L3UnitOfMsure" minOccurs="0"/>
+      <xs:element ref="L3UnitCost" minOccurs="0"/>
+      <xs:element ref="L3ItemTot" minOccurs="0"/>
+      <xs:element ref="L3DiscntAmt" minOccurs="0"/>
+      <xs:element ref="L3TaxAmt" minOccurs="0"/>
+      <xs:element ref="L3TaxRt" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <!-- ##### Customer Data Group: CustInfoGrp ##### -->
+  <xs:complexType name="CustInfoGrp">
+    <xs:sequence>
+      <xs:element ref="AVSBillingAddr" minOccurs="0"/>
+      <xs:element ref="AVSBillingPostalCode" minOccurs="0"/>
+      <xs:element ref="CHFirstNm" minOccurs="0"/>
+      <xs:element ref="CHLastNm" minOccurs="0"/>
+      <xs:element ref="CHFullNmRes" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <!-- ##### Order Data Group: OrderGrp ##### -->
+  <xs:complexType name="OrderGrp">
+    <xs:sequence>
+      <xs:element ref="OrderDate" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <!-- ##### Stored Value Data Group: StoredValueGrp ##### -->
+  <xs:complexType name="StoredValueGrp">
+    <xs:sequence>
+      <xs:element ref="EschtblTxn" minOccurs="0"/>
+      <xs:element ref="CardClass" minOccurs="0"/>
+      <xs:element ref="CardCost" minOccurs="0"/>
+      <xs:element ref="FACode" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <!-- ##### Response Group: RespGrp ##### -->
+  <xs:complexType name="RespGrp">
+    <xs:sequence>
+      <xs:element ref="RespCode" minOccurs="0"/>
+      <xs:element ref="AuthID" minOccurs="0"/>
+      <xs:element ref="AddtlRespData" minOccurs="0"/>
+      <xs:element ref="SttlmDate" minOccurs="0"/>
+      <xs:element ref="AthNtwkID" minOccurs="0"/>
+      <xs:element ref="ErrorData" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <!-- ##### Original Auth Group: OrigAuthGrp ##### -->
+  <xs:complexType name="OrigAuthGrp">
+    <xs:sequence>
+      <xs:element ref="OrigAuthID" minOccurs="0"/>
+      <xs:element ref="OrigLocalDateTime" minOccurs="0"/>
+      <xs:element ref="OrigTranDateTime" minOccurs="0"/>
+      <xs:element ref="OrigSTAN" minOccurs="0"/>
+      <xs:element ref="OrigRespCode" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <!-- ##### Dynamic Currency Conversion Group: DCCGrp ##### -->
+  <xs:complexType name="DCCGrp">
+    <xs:sequence>
+      <xs:element ref="DCCInd" minOccurs="0"/>
+      <xs:element ref="DCCTimeZn" minOccurs="0"/>
+      <xs:element ref="DCCAmt" minOccurs="0"/>
+      <xs:element ref="DCCRate" minOccurs="0"/>
+      <xs:element ref="DCCCrncy" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <!-- ##### Host Totals Group: HostTotGrp ##### -->
+  <xs:complexType name="HostTotGrp">
+    <xs:sequence>
+      <xs:element ref="TotReqDate" minOccurs="0"/>
+      <xs:element ref="Password" minOccurs="0"/>
+      <xs:element ref="NetSettleAmt" minOccurs="0"/>
+      <xs:element ref="FeeAmt" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <!-- ##### Host Totals Detail Group: HostTotDetGrp ##### -->
+  <xs:complexType name="HostTotDetGrp">
+    <xs:sequence>
+      <xs:element ref="CardTag" minOccurs="0"/>
+      <xs:element ref="TxnCt" minOccurs="0"/>
+      <xs:element ref="CardTxnAmt" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <!-- ##### Product Code Group: ProdCodeGrp ##### -->
+  <xs:complexType name="ProdCodeGrp">
+    <xs:sequence>
+      <xs:element ref="ServLvl" minOccurs="0"/>
+      <xs:element ref="NumOfProds" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <!-- ##### Product Code  Detail Group: ProdCodeDetGrp ##### -->
+  <xs:complexType name="ProdCodeDetGrp">
+    <xs:sequence>
+      <xs:element ref="NACSProdCode" minOccurs="0"/>
+      <xs:element ref="UnitOfMsure" minOccurs="0"/>
+      <xs:element ref="Qnty" minOccurs="0"/>
+      <xs:element ref="UnitPrice" minOccurs="0"/>
+      <xs:element ref="ProdAmt" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <!-- ##### File Download Group: FileDLGrp ##### -->
+  <xs:complexType name="FileDLGrp">
+    <xs:sequence>
+      <xs:element ref="FileType" minOccurs="0"/>
+      <xs:element ref="PenFileType" minOccurs="0"/>
+      <xs:element ref="SubFileType" minOccurs="0"/>
+      <xs:element ref="LdSeqNum" minOccurs="0"/>
+      <xs:element ref="DMTblVer" minOccurs="0"/>
+      <xs:element ref="DBINTblVer" minOccurs="0"/>
+      <xs:element ref="DRuTblVer" minOccurs="0"/>
+      <xs:element ref="DReTblVer" minOccurs="0"/>
+      <xs:element ref="DSAFTblVer" minOccurs="0"/>
+      <xs:element ref="DPrTblVer" minOccurs="0"/>
+      <xs:element ref="DPdTblVer" minOccurs="0"/>
+      <xs:element ref="HMTblVer" minOccurs="0"/>
+      <xs:element ref="HBINTblVer" minOccurs="0"/>
+      <xs:element ref="HRuTblVer" minOccurs="0"/>
+      <xs:element ref="HReTblVer" minOccurs="0"/>
+      <xs:element ref="HSAFTblVer" minOccurs="0"/>
+      <xs:element ref="HPrTblVer" minOccurs="0"/>
+      <xs:element ref="HPdTblVer" minOccurs="0"/>
+      <xs:element ref="HWVer" minOccurs="0"/>
+      <xs:element ref="SWVer" minOccurs="0"/>
+      <xs:element ref="FWVer" minOccurs="0"/>
+      <xs:element ref="FunCode" minOccurs="0"/>
+      <xs:element ref="CurrFileCreationDt" minOccurs="0"/>
+      <xs:element ref="FileSize" minOccurs="0"/>
+      <xs:element ref="FileCRC16" minOccurs="0"/>
+      <xs:element ref="LdCtrlKey" minOccurs="0"/>
+      <xs:element ref="FBSeq" minOccurs="0"/>
+      <xs:element ref="ReqFBMaxSize" minOccurs="0"/>
+      <xs:element ref="ReqFileOffset" minOccurs="0"/>
+      <xs:element ref="NextFileDLOffset" minOccurs="0"/>
+      <xs:element ref="FBData" minOccurs="0"/>
+      <xs:element ref="TLMerchName" minOccurs="0"/>
+      <xs:element ref="TLStNum" minOccurs="0"/>
+      <xs:element ref="TLMerchAddr" minOccurs="0"/>
+      <xs:element ref="TLMerchCity" minOccurs="0"/>
+      <xs:element ref="TLMerchState" minOccurs="0"/>
+      <xs:element ref="TLMerchPostalCode" minOccurs="0"/>
+      <xs:element ref="TTDay" minOccurs="0"/>
+      <xs:element ref="TTDateTime" minOccurs="0"/>
+      <xs:element ref="TTCutTime" minOccurs="0"/>
+      <xs:element ref="TTPassword" minOccurs="0"/>
+      <xs:element ref="RctTxtStrDt" minOccurs="0"/>
+      <xs:element ref="RctTxtEndDt" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <!-- #####  TABLE LOAD Group: TLGrp ##### -->
+  <xs:complexType name="TLGrp">
+    <xs:sequence>
+      <xs:element ref="TLCardType" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <!-- #####  RECEIPT TEXT DETAIL Group: RctTxtDetGrp ##### -->
+  <xs:complexType name="RctTxtDetGrp">
+    <xs:sequence>
+      <xs:element ref="RctTxtData" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <!-- #####  HOST DISCOUNT DETAIL Group: HostDiscDetGrp ##### -->
+  <xs:complexType name="HostDiscDetGrp">
+    <xs:sequence>
+      <xs:element ref="HDStrDt" minOccurs="0"/>
+      <xs:element ref="HDEndDt" minOccurs="0"/>
+      <xs:element ref="HDCardType" minOccurs="0"/>
+      <xs:element ref="HDBINBeg" minOccurs="0"/>
+      <xs:element ref="HDBINEnd" minOccurs="0"/>
+      <xs:element ref="HDProdCd" minOccurs="0"/>
+      <xs:element ref="HDProdDiscAmt" minOccurs="0"/>
+      <xs:element ref="HDDiscType" minOccurs="0"/>
+      <xs:element ref="HDQtyLt" minOccurs="0"/>
+      <xs:element ref="HDProgDesc" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <!-- ##### FLEET Group: FltGrp ##### -->
+  <xs:complexType name="FltGrp">
+    <xs:sequence>
+      <xs:element ref="Odo" minOccurs="0"/>
+      <xs:element ref="VehNum" minOccurs="0"/>
+      <xs:element ref="JobNum" minOccurs="0"/>
+      <xs:element ref="DrvNum" minOccurs="0"/>
+      <xs:element ref="FltEmpNum" minOccurs="0"/>
+      <xs:element ref="LicNum" minOccurs="0"/>
+      <xs:element ref="JobID" minOccurs="0"/>
+      <xs:element ref="DeptNum" minOccurs="0"/>
+      <xs:element ref="CustData" minOccurs="0"/>
+      <xs:element ref="UserID" minOccurs="0"/>
+      <xs:element ref="VehIDNum" minOccurs="0"/>
+      <xs:element ref="ServResCd" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <!-- ############################################################ -->
+  <!-- TRANSACTION DEFINITIONS                        			  -->
+  <!-- ############################################################ -->
+  <!--  CREDIT SECTION                                                                              -->
+  <!-- ##### Credit Request Details ##### -->
+  <xs:complexType name="CreditRequestDetails">
+    <xs:sequence>
+      <xs:element name="CommonGrp" type="CommonGrp" minOccurs="0"/>
+      <xs:element name="BillPayGrp" type="BillPayGrp" minOccurs="0"/>
+      <xs:element name="AltMerchNameAndAddrGrp" type="AltMerchNameAndAddrGrp" minOccurs="0"/>
+      <xs:element name="CardGrp" type="CardGrp" minOccurs="0"/>
+      <xs:element name="AddtlAmtGrp" type="AddtlAmtGrp" minOccurs="0" maxOccurs="6"/>
+      <xs:element name="EMVGrp" type="EMVGrp" minOccurs="0"/>
+      <xs:element name="TAGrp" type="TAGrp" minOccurs="0"/>
+      <xs:element name="OfferGrp" type="OfferGrp" minOccurs="0"/>
+      <xs:element name="EcommGrp" type="EcommGrp" minOccurs="0"/>
+      <xs:element name="SecrTxnGrp" type="SecrTxnGrp" minOccurs="0"/>
+      <xs:choice>
+        <xs:element name="VisaGrp" type="VisaGrp" minOccurs="0"/>
+        <xs:element name="MCGrp" type="MCGrp" minOccurs="0"/>
+        <xs:element name="DSGrp" type="DSGrp" minOccurs="0"/>
+        <xs:element name="AmexGrp" type="AmexGrp" minOccurs="0"/>
+      </xs:choice>
+      <xs:element name="PurchCardlvl2Grp" type="PurchCardlvl2Grp" minOccurs="0"/>
+      <xs:element name="PurchCardlvl3Grp" type="PurchCardlvl3Grp" minOccurs="0" maxOccurs="999"/>
+      <xs:element name="CustInfoGrp" type="CustInfoGrp" minOccurs="0"/>
+      <xs:element name="OrderGrp" type="OrderGrp" minOccurs="0"/>
+      <xs:element name="OrigAuthGrp" type="OrigAuthGrp" minOccurs="0"/>
+      <xs:element name="DCCGrp" type="DCCGrp" minOccurs="0"/>
+      <xs:element name="ProdCodeGrp" type="ProdCodeGrp" minOccurs="0"/>
+      <xs:element name="ProdCodeDetGrp" type="ProdCodeDetGrp" minOccurs="0" maxOccurs="10"/>
+    </xs:sequence>
+  </xs:complexType>
+  <!-- ##### Credit Response Details ##### -->
+  <xs:complexType name="CreditResponseDetails">
+    <xs:sequence>
+      <xs:element name="CommonGrp" type="CommonGrp" minOccurs="0"/>
+      <xs:element name="BillPayGrp" type="BillPayGrp" minOccurs="0"/>
+      <xs:element name="CardGrp" type="CardGrp" minOccurs="0"/>
+      <xs:element name="AddtlAmtGrp" type="AddtlAmtGrp" minOccurs="0" maxOccurs="6"/>
+      <xs:element name="EMVGrp" type="EMVGrp" minOccurs="0"/>
+      <xs:element name="TAGrp" type="TAGrp" minOccurs="0"/>
+      <xs:element name="OfferGrp" type="OfferGrp" minOccurs="0"/>
+      <xs:element name="SecrTxnGrp" type="SecrTxnGrp" minOccurs="0"/>
+      <xs:choice>
+        <xs:element name="VisaGrp" type="VisaGrp" minOccurs="0"/>
+        <xs:element name="MCGrp" type="MCGrp" minOccurs="0"/>
+        <xs:element name="DSGrp" type="DSGrp" minOccurs="0"/>
+        <xs:element name="AmexGrp" type="AmexGrp" minOccurs="0"/>
+      </xs:choice>
+      <xs:element name="CustInfoGrp" type="CustInfoGrp" minOccurs="0"/>
+      <xs:element name="RespGrp" type="RespGrp" minOccurs="0"/>
+      <xs:element name="OrigAuthGrp" type="OrigAuthGrp" minOccurs="0"/>
+      <xs:element name="FileDLGrp" type="FileDLGrp" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <!-- ##### Debit Request Details ##### -->
+  <xs:complexType name="DebitRequestDetails">
+    <xs:sequence>
+      <xs:element name="CommonGrp" type="CommonGrp" minOccurs="0"/>
+      <xs:element name="BillPayGrp" type="BillPayGrp" minOccurs="0"/>
+      <xs:element name="AltMerchNameAndAddrGrp" type="AltMerchNameAndAddrGrp" minOccurs="0"/>
+      <xs:element name="CardGrp" type="CardGrp" minOccurs="0"/>
+      <xs:element name="PINGrp" type="PINGrp" minOccurs="0"/>
+      <xs:element name="AddtlAmtGrp" type="AddtlAmtGrp" minOccurs="0" maxOccurs="6"/>
+      <xs:element name="TAGrp" type="TAGrp" minOccurs="0"/>
+      <xs:element name="OfferGrp" type="OfferGrp" minOccurs="0"/>
+      <xs:element name="VisaGrp" type="VisaGrp" minOccurs="0"/>
+      <xs:element name="DebitGrp" type="DebitGrp" minOccurs="0"/>
+      <xs:element name="OrigAuthGrp" type="OrigAuthGrp" minOccurs="0"/>
+      <xs:element name="ProdCodeGrp" type="ProdCodeGrp" minOccurs="0"/>
+      <xs:element name="ProdCodeDetGrp" type="ProdCodeDetGrp" minOccurs="0" maxOccurs="10"/>
+    </xs:sequence>
+  </xs:complexType>
+  <!-- ##### Debit Response Details ##### -->
+  <xs:complexType name="DebitResponseDetails">
+    <xs:sequence>
+      <xs:element name="CommonGrp" type="CommonGrp" minOccurs="0"/>
+      <xs:element name="AddtlAmtGrp" type="AddtlAmtGrp" minOccurs="0" maxOccurs="6"/>
+      <xs:element name="TAGrp" type="TAGrp" minOccurs="0"/>
+      <xs:element name="OfferGrp" type="OfferGrp" minOccurs="0"/>
+      <xs:element name="DebitGrp" type="DebitGrp" minOccurs="0"/>
+      <xs:element name="RespGrp" type="RespGrp" minOccurs="0"/>
+      <xs:element name="FileDLGrp" type="FileDLGrp" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <!-- ##### Pinless Debit Request Details ##### -->
+  <xs:complexType name="PinlessDebitRequestDetails">
+    <xs:sequence>
+      <xs:element name="CommonGrp" type="CommonGrp" minOccurs="0"/>
+      <xs:element name="BillPayGrp" type="BillPayGrp" minOccurs="0"/>
+      <xs:element name="AltMerchNameAndAddrGrp" type="AltMerchNameAndAddrGrp" minOccurs="0"/>
+      <xs:element name="CardGrp" type="CardGrp" minOccurs="0"/>
+      <xs:element name="TAGrp" type="TAGrp" minOccurs="0"/>
+      <xs:element name="EcommGrp" type="EcommGrp" minOccurs="0"/>
+      <xs:element name="VisaGrp" type="VisaGrp" minOccurs="0"/>
+      <xs:element name="DebitGrp" type="DebitGrp" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <!-- ##### Pinless Debit Response Details ##### -->
+  <xs:complexType name="PinlessDebitResponseDetails">
+    <xs:sequence>
+      <xs:element name="CommonGrp" type="CommonGrp" minOccurs="0"/>
+      <xs:element name="BillPayGrp" type="BillPayGrp" minOccurs="0"/>
+      <xs:element name="CardGrp" type="CardGrp" minOccurs="0"/>
+      <xs:element name="AddtlAmtGrp" type="AddtlAmtGrp" minOccurs="0" maxOccurs="6"/>
+      <xs:element name="TAGrp" type="TAGrp" minOccurs="0"/>
+      <xs:element name="DebitGrp" type="DebitGrp" minOccurs="0"/>
+      <xs:element name="RespGrp" type="RespGrp" minOccurs="0"/>
+      <xs:element name="FileDLGrp" type="FileDLGrp" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <!--  Check Request Details   -->
+  <xs:complexType name="CheckRequestDetails">
+    <xs:sequence>
+      <xs:element name="CommonGrp" type="CommonGrp" minOccurs="0"/>
+      <xs:element name="AltMerchNameAndAddrGrp" type="AltMerchNameAndAddrGrp" minOccurs="0"/>
+      <xs:element name="CheckGrp" type="CheckGrp" minOccurs="0"/>
+      <xs:element name="TeleCheckECAGrp" type="TeleCheckECAGrp" minOccurs="0"/>
+      <xs:element name="AddtlAmtGrp" type="AddtlAmtGrp" minOccurs="0" maxOccurs="6"/>
+      <xs:element name="ProdCodeGrp" type="ProdCodeGrp" minOccurs="0"/>
+      <xs:element name="ProdCodeDetGrp" type="ProdCodeDetGrp" minOccurs="0" maxOccurs="10"/>
+    </xs:sequence>
+  </xs:complexType>
+  <!--  Check Response Details -->
+  <xs:complexType name="CheckResponseDetails">
+    <xs:sequence>
+      <xs:element name="CommonGrp" type="CommonGrp" minOccurs="0"/>
+      <xs:element name="TeleCheckECAGrp" type="TeleCheckECAGrp" minOccurs="0"/>
+      <xs:element name="AddtlAmtGrp" type="AddtlAmtGrp" minOccurs="0" maxOccurs="6"/>
+      <xs:element name="RespGrp" type="RespGrp" minOccurs="0"/>
+      <xs:element name="FileDLGrp" type="FileDLGrp" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <!-- ##### EBT Request Details ##### -->
+  <xs:complexType name="EBTRequestDetails">
+    <xs:sequence>
+      <xs:element name="CommonGrp" type="CommonGrp" minOccurs="0"/>
+      <xs:element name="AltMerchNameAndAddrGrp" type="AltMerchNameAndAddrGrp" minOccurs="0"/>
+      <xs:element name="CardGrp" type="CardGrp" minOccurs="0"/>
+      <xs:element name="PINGrp" type="PINGrp" minOccurs="0"/>
+      <xs:element name="AddtlAmtGrp" type="AddtlAmtGrp" minOccurs="0" maxOccurs="6"/>
+      <xs:element name="TAGrp" type="TAGrp" minOccurs="0"/>
+      <xs:element name="EbtGrp" type="EbtGrp" minOccurs="0"/>
+      <xs:element name="EWICDetGrp" type="EWICDetGrp" minOccurs="0" maxOccurs="50"/>
+      <xs:element name="OrigAuthGrp" type="OrigAuthGrp" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <!-- ##### EBT Response Details ##### -->
+  <xs:complexType name="EBTResponseDetails">
+    <xs:sequence>
+      <xs:element name="CommonGrp" type="CommonGrp" minOccurs="0"/>
+      <xs:element name="CardGrp" type="CardGrp" minOccurs="0"/>
+      <xs:element name="AddtlAmtGrp" type="AddtlAmtGrp" minOccurs="0" maxOccurs="6"/>
+      <xs:element name="TAGrp" type="TAGrp" minOccurs="0"/>
+      <xs:element name="EbtGrp" type="EbtGrp" minOccurs="0"/>
+      <xs:element name="EWICGrp" type="EWICGrp" minOccurs="0"/>
+      <xs:element name="EWICBalInfoGrp" type="EWICBalInfoGrp" minOccurs="0" maxOccurs="50"/>
+      <xs:element name="EWICDetGrp" type="EWICDetGrp" minOccurs="0" maxOccurs="50"/>
+      <xs:element name="RespGrp" type="RespGrp" minOccurs="0"/>
+      <xs:element name="FileDLGrp" type="FileDLGrp" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <!-- ##### Prepaid Request Details ##### -->
+  <xs:complexType name="PrepaidRequestDetails">
+    <xs:sequence>
+      <xs:element name="CommonGrp" type="CommonGrp" minOccurs="0"/>
+      <xs:element name="AltMerchNameAndAddrGrp" type="AltMerchNameAndAddrGrp" minOccurs="0"/>
+      <xs:element name="CardGrp" type="CardGrp" minOccurs="0"/>
+      <xs:element name="AddtlAmtGrp" type="AddtlAmtGrp" minOccurs="0" maxOccurs="6"/>
+      <xs:element name="StoredValueGrp" type="StoredValueGrp" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <!-- ##### Prepaid Response Details ##### -->
+  <xs:complexType name="PrepaidResponseDetails">
+    <xs:sequence>
+      <xs:element name="CommonGrp" type="CommonGrp" minOccurs="0"/>
+      <xs:element name="CardGrp" type="CardGrp" minOccurs="0"/>
+      <xs:element name="AddtlAmtGrp" type="AddtlAmtGrp" minOccurs="0" maxOccurs="6"/>
+      <xs:element name="StoredValueGrp" type="StoredValueGrp" minOccurs="0"/>
+      <xs:element name="RespGrp" type="RespGrp" minOccurs="0"/>
+      <xs:element name="FileDLGrp" type="FileDLGrp" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <!-- ##### Generic Prepaid Request Details ##### -->
+  <xs:complexType name="GenPrepaidRequestDetails">
+    <xs:sequence>
+      <xs:element name="CommonGrp" type="CommonGrp" minOccurs="0"/>
+      <xs:element name="CardGrp" type="CardGrp" minOccurs="0"/>
+      <xs:element name="AddtlAmtGrp" type="AddtlAmtGrp" minOccurs="0" maxOccurs="6"/>
+      <xs:element name="CustInfoGrp" type="CustInfoGrp" minOccurs="0"/>
+      <xs:element name="OrigAuthGrp" type="OrigAuthGrp" minOccurs="0"/>
+      <xs:element name="ProdCodeGrp" type="ProdCodeGrp" minOccurs="0"/>
+      <xs:element name="ProdCodeDetGrp" type="ProdCodeDetGrp" minOccurs="0" maxOccurs="10"/>
+    </xs:sequence>
+  </xs:complexType>
+  <!-- ##### Generic Prepaid Response Details ##### -->
+  <xs:complexType name="GenPrepaidResponseDetails">
+    <xs:sequence>
+      <xs:element name="CommonGrp" type="CommonGrp" minOccurs="0"/>
+      <xs:element name="CardGrp" type="CardGrp" minOccurs="0"/>
+      <xs:element name="AddtlAmtGrp" type="AddtlAmtGrp" minOccurs="0" maxOccurs="6"/>
+      <xs:element name="RespGrp" type="RespGrp" minOccurs="0"/>
+      <xs:element name="FileDLGrp" type="FileDLGrp" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <!-- ##### Private Label Request Details ##### -->
+  <xs:complexType name="PrivateLabelRequestDetails">
+    <xs:sequence>
+      <xs:element name="CommonGrp" type="CommonGrp" minOccurs="0"/>
+      <xs:element name="CardGrp" type="CardGrp" minOccurs="0"/>
+      <xs:element name="AddtlAmtGrp" type="AddtlAmtGrp" minOccurs="0" maxOccurs="6"/>
+      <xs:element name="CustInfoGrp" type="CustInfoGrp" minOccurs="0"/>
+      <xs:element name="OrigAuthGrp" type="OrigAuthGrp" minOccurs="0"/>
+      <xs:element name="ProdCodeGrp" type="ProdCodeGrp" minOccurs="0"/>
+      <xs:element name="ProdCodeDetGrp" type="ProdCodeDetGrp" minOccurs="0" maxOccurs="10"/>
+    </xs:sequence>
+  </xs:complexType>
+  <!-- ##### Private Label Response Details ##### -->
+  <xs:complexType name="PrivateLabelResponseDetails">
+    <xs:sequence>
+      <xs:element name="CommonGrp" type="CommonGrp" minOccurs="0"/>
+      <xs:element name="AddtlAmtGrp" type="AddtlAmtGrp" minOccurs="0" maxOccurs="6"/>
+      <xs:element name="RespGrp" type="RespGrp" minOccurs="0"/>
+      <xs:element name="FileDLGrp" type="FileDLGrp" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <!--  Fleet Request Details -->
+  <xs:complexType name="FleetRequestDetails">
+    <xs:sequence>
+      <xs:element name="CommonGrp" type="CommonGrp" minOccurs="0"/>
+      <xs:element name="CardGrp" type="CardGrp" minOccurs="0"/>
+      <xs:element name="AddtlAmtGrp" type="AddtlAmtGrp" minOccurs="0" maxOccurs="6"/>
+      <xs:element name="TAGrp" type="TAGrp" minOccurs="0"/>
+      <xs:choice>
+        <xs:element name="VisaGrp" type="VisaGrp" minOccurs="0"/>
+        <xs:element name="MCGrp" type="MCGrp" minOccurs="0"/>
+      </xs:choice>
+      <xs:element name="CustInfoGrp" type="CustInfoGrp" minOccurs="0"/>
+      <xs:element name="OrigAuthGrp" type="OrigAuthGrp" minOccurs="0"/>
+      <xs:element name="ProdCodeGrp" type="ProdCodeGrp" minOccurs="0"/>
+      <xs:element name="ProdCodeDetGrp" type="ProdCodeDetGrp" minOccurs="0" maxOccurs="10"/>
+      <xs:element name="FltGrp" type="FltGrp" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <!--  Fleet Response Details -->
+  <xs:complexType name="FleetResponseDetails">
+    <xs:sequence>
+      <xs:element name="CommonGrp" type="CommonGrp" minOccurs="0"/>
+      <xs:element name="CardGrp" type="CardGrp" minOccurs="0"/>
+      <xs:element name="AddtlAmtGrp" type="AddtlAmtGrp" minOccurs="0" maxOccurs="6"/>
+      <xs:element name="TAGrp" type="TAGrp" minOccurs="0"/>
+      <xs:choice>
+        <xs:element name="VisaGrp" type="VisaGrp" minOccurs="0"/>
+        <xs:element name="MCGrp" type="MCGrp" minOccurs="0"/>
+      </xs:choice>
+      <xs:element name="RespGrp" type="RespGrp" minOccurs="0"/>
+      <xs:element name="FileDLGrp" type="FileDLGrp" minOccurs="0"/>
+      <xs:element name="FltGrp" type="FltGrp" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <!-- ##### TransArmor Request Details ##### -->
+  <xs:complexType name="TARequestDetails">
+    <xs:sequence>
+      <xs:element name="CommonGrp" type="CommonGrp" minOccurs="0"/>
+      <xs:element name="CardGrp" type="CardGrp" minOccurs="0"/>
+      <xs:element name="TAGrp" type="TAGrp" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <!-- ##### TransArmor Response Details ##### -->
+  <xs:complexType name="TAResponseDetails">
+    <xs:sequence>
+      <xs:element name="CommonGrp" type="CommonGrp" minOccurs="0"/>
+      <xs:element name="TAGrp" type="TAGrp" minOccurs="0"/>
+      <xs:element name="RespGrp" type="RespGrp" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <!-- ##### Admin Request Details ##### -->
+  <xs:complexType name="AdminRequestDetails">
+    <xs:sequence>
+      <xs:element name="CommonGrp" type="CommonGrp" minOccurs="0"/>
+      <xs:element name="HostTotGrp" type="HostTotGrp" minOccurs="0"/>
+      <xs:element name="HostTotDetGrp" type="HostTotDetGrp" minOccurs="0" maxOccurs="18"/>
+      <xs:element name="FileDLGrp" type="FileDLGrp" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <!-- ##### Admin Response Details ##### -->
+  <xs:complexType name="AdminResponseDetails">
+    <xs:sequence>
+      <xs:element name="CommonGrp" type="CommonGrp" minOccurs="0"/>
+      <xs:element name="RespGrp" type="RespGrp" minOccurs="0"/>
+      <xs:element name="HostTotGrp" type="HostTotGrp" minOccurs="0"/>
+      <xs:element name="HostTotDetGrp" type="HostTotDetGrp" minOccurs="0" maxOccurs="18"/>
+      <xs:element name="FileDLGrp" type="FileDLGrp" minOccurs="0"/>
+      <xs:element name="TLGrp" type="TLGrp" minOccurs="0" maxOccurs="40"/>
+      <xs:element name="RctTxtDetGrp" type="RctTxtDetGrp" minOccurs="0"/>
+      <xs:element name="HostDiscDetGrp" type="HostDiscDetGrp" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <!--  VOID/Timeout Reversal Request Details              -->
+  <xs:complexType name="VoidTOReversalRequestDetails">
+    <xs:sequence>
+      <xs:element name="CommonGrp" type="CommonGrp" minOccurs="0"/>
+      <xs:element name="BillPayGrp" type="BillPayGrp" minOccurs="0"/>
+      <xs:element name="AltMerchNameAndAddrGrp" type="AltMerchNameAndAddrGrp" minOccurs="0"/>
+      <xs:element name="CardGrp" type="CardGrp" minOccurs="0"/>
+      <xs:element name="CheckGrp" type="CheckGrp" minOccurs="0"/>
+      <xs:element name="TeleCheckECAGrp" type="TeleCheckECAGrp" minOccurs="0"/>
+      <xs:element name="PINGrp" type="PINGrp" minOccurs="0"/>
+      <xs:element name="AddtlAmtGrp" type="AddtlAmtGrp" minOccurs="0" maxOccurs="6"/>
+      <xs:element name="EMVGrp" type="EMVGrp" minOccurs="0"/>
+      <xs:element name="TAGrp" type="TAGrp" minOccurs="0"/>
+      <xs:element name="OfferGrp" type="OfferGrp" minOccurs="0"/>
+      <xs:element name="EcommGrp" type="EcommGrp" minOccurs="0"/>
+      <xs:element name="SecrTxnGrp" type="SecrTxnGrp" minOccurs="0"/>
+      <xs:choice>
+        <xs:element name="VisaGrp" type="VisaGrp" minOccurs="0"/>
+        <xs:element name="MCGrp" type="MCGrp" minOccurs="0"/>
+        <xs:element name="DSGrp" type="DSGrp" minOccurs="0"/>
+        <xs:element name="AmexGrp" type="AmexGrp" minOccurs="0"/>
+      </xs:choice>
+      <xs:element name="EbtGrp" type="EbtGrp" minOccurs="0"/>
+      <xs:element name="EWICDetGrp" type="EWICDetGrp" minOccurs="0" maxOccurs="50"/>
+      <xs:element name="DebitGrp" type="DebitGrp" minOccurs="0"/>
+      <xs:element name="PurchCardlvl2Grp" type="PurchCardlvl2Grp" minOccurs="0"/>
+      <xs:element name="PurchCardlvl3Grp" type="PurchCardlvl3Grp" minOccurs="0" maxOccurs="999"/>
+      <xs:element name="CustInfoGrp" type="CustInfoGrp" minOccurs="0"/>
+      <xs:element name="OrderGrp" type="OrderGrp" minOccurs="0"/>
+      <xs:element name="StoredValueGrp" type="StoredValueGrp" minOccurs="0"/>
+      <xs:element name="OrigAuthGrp" type="OrigAuthGrp" minOccurs="0"/>
+      <xs:element name="DCCGrp" type="DCCGrp" minOccurs="0"/>
+      <xs:element name="ProdCodeGrp" type="ProdCodeGrp" minOccurs="0"/>
+      <xs:element name="ProdCodeDetGrp" type="ProdCodeDetGrp" minOccurs="0" maxOccurs="10"/>
+      <xs:element name="FltGrp" type="FltGrp" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <!--  VOID/Timeout Reversal Response Details              -->
+  <xs:complexType name="VoidTOReversalResponseDetails">
+    <xs:sequence>
+      <xs:element name="CommonGrp" type="CommonGrp" minOccurs="0"/>
+      <xs:element name="CardGrp" type="CardGrp" minOccurs="0"/>
+      <xs:element name="AddtlAmtGrp" type="AddtlAmtGrp" minOccurs="0" maxOccurs="6"/>
+      <xs:element name="EMVGrp" type="EMVGrp" minOccurs="0"/>
+      <xs:element name="TAGrp" type="TAGrp" minOccurs="0"/>
+      <xs:choice>
+        <xs:element name="VisaGrp" type="VisaGrp" minOccurs="0"/>
+        <xs:element name="MCGrp" type="MCGrp" minOccurs="0"/>
+        <xs:element name="DSGrp" type="DSGrp" minOccurs="0"/>
+        <xs:element name="AmexGrp" type="AmexGrp" minOccurs="0"/>
+      </xs:choice>
+      <xs:element name="EWICDetGrp" type="EWICDetGrp" minOccurs="0" maxOccurs="50"/>
+      <xs:element name="DebitGrp" type="DebitGrp" minOccurs="0"/>
+      <xs:element name="RespGrp" type="RespGrp" minOccurs="0"/>
+      <xs:element name="OrigAuthGrp" type="OrigAuthGrp" minOccurs="0"/>
+      <xs:element name="FileDLGrp" type="FileDLGrp" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <!--  Reject Response Details              -->
+  <xs:complexType name="RejectResponseDetails">
+    <xs:sequence>
+      <xs:element name="CommonGrp" type="CommonGrp" minOccurs="0"/>
+      <xs:element name="RespGrp" type="RespGrp" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <!-- ############################################################ -->
+  <!-- MESSAGE DEFINITIONS                                          -->
+  <!-- ############################################################ -->
+  <xs:element name="GMF" type="GMFMessageVariants"/>
+  <xs:complexType name="GMFMessageVariants">
+    <xs:sequence>
+      <xs:choice>
+        <!-- ### REQUESTS ### -->
+        <!-- Credit -->
+        <xs:element name="CreditRequest" type="CreditRequestDetails"/>
+        <!-- Debit -->
+        <xs:element name="DebitRequest" type="DebitRequestDetails"/>
+        <!-- Pinless Debit -->
+        <xs:element name="PinlessDebitRequest" type="PinlessDebitRequestDetails"/>
+        <!-- Check -->
+        <xs:element name="CheckRequest" type="CheckRequestDetails"/>
+        <!-- EBT -->
+        <xs:element name="EBTRequest" type="EBTRequestDetails"/>
+        <!-- Prepaid -->
+        <xs:element name="PrepaidRequest" type="PrepaidRequestDetails"/>
+        <!-- Generic Prepaid -->
+        <xs:element name="GenPrepaidRequest" type="GenPrepaidRequestDetails"/>
+        <!-- Private Label -->
+        <xs:element name="PrivateLabelRequest" type="PrivateLabelRequestDetails"/>
+        <!-- Fleet -->
+        <xs:element name="FleetRequest" type="FleetRequestDetails"/>
+        <!-- TransArmor -->
+        <xs:element name="TransArmorRequest" type="TARequestDetails"/>
+        <!-- Admin -->
+        <xs:element name="AdminRequest" type="AdminRequestDetails"/>
+        <!-- Void/Reversal -->
+        <xs:element name="ReversalRequest" type="VoidTOReversalRequestDetails"/>
+        <!-- ### RESPONSES ### -->
+        <!-- Credit -->
+        <xs:element name="CreditResponse" type="CreditResponseDetails"/>
+        <!-- Debit -->
+        <xs:element name="DebitResponse" type="DebitResponseDetails"/>
+        <!-- Pinless Debit -->
+        <xs:element name="PinlessDebitResponse" type="PinlessDebitResponseDetails"/>
+        <!-- Check -->
+        <xs:element name="CheckResponse" type="CheckResponseDetails"/>
+        <!-- EBT -->
+        <xs:element name="EBTResponse" type="EBTResponseDetails"/>
+        <!-- Prepaid  -->
+        <xs:element name="PrepaidResponse" type="PrepaidResponseDetails"/>
+        <!-- Generic Prepaid -->
+        <xs:element name="GenPrepaidResponse" type="GenPrepaidResponseDetails"/>
+        <!-- Private Label -->
+        <xs:element name="PrivateLabelResponse" type="PrivateLabelResponseDetails"/>
+        <!-- Fleet -->
+        <xs:element name="FleetResponse" type="FleetResponseDetails"/>
+        <!-- TransArmor -->
+        <xs:element name="TransArmorResponse" type="TAResponseDetails"/>
+        <!-- Admin -->
+        <xs:element name="AdminResponse" type="AdminResponseDetails"/>
+        <!-- Reject -->
+        <xs:element name="RejectResponse" type="RejectResponseDetails"/>
+        <!-- Void/Reversal -->
+        <xs:element name="ReversalResponse" type="VoidTOReversalResponseDetails"/>
+      </xs:choice>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

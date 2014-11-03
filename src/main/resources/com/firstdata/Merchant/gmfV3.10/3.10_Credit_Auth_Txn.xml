@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GMF xmlns="com/firstdata/Merchant/gmfV3.10" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<CreditRequest>
+		<CommonGrp>
+			<PymtType>Credit</PymtType>
+			<TxnType>Authorization</TxnType>
+			<LocalDateTime>20140717013358</LocalDateTime>
+			<TrnmsnDateTime>20140717013358</TrnmsnDateTime>
+			<STAN>369948</STAN>
+			<RefNum>237743650711</RefNum>
+			<OrderNum>787376464313</OrderNum>
+			<TPPID>RHO001</TPPID>
+			<TermID>00000001</TermID>
+			<MerchID>000064</MerchID>
+			<MerchCatCode>5812</MerchCatCode>
+			<POSEntryMode>901</POSEntryMode>
+			<POSCondCode>00</POSCondCode>
+			<TermCatCode>01</TermCatCode>
+			<TermEntryCapablt>04</TermEntryCapablt>
+			<TxnAmt>6196</TxnAmt>
+			<TxnCrncy>840</TxnCrncy>
+			<TermLocInd>0</TermLocInd>
+			<CardCaptCap>1</CardCaptCap>
+			<GroupID>20001</GroupID>
+		</CommonGrp>
+		<CardGrp>
+			<!--	Both AcctNum and Track2Data are not allowed. Need to remove AcctNum -->
+			<AcctNum>6240000006438714</AcctNum>
+			<Track2Data>6240000006438714=181210123456789</Track2Data>
+			<CardType>Discover</CardType>
+		</CardGrp>
+		<AddtlAmtGrp>
+			<PartAuthrztnApprvlCapablt>1</PartAuthrztnApprvlCapablt>
+		</AddtlAmtGrp>
+	</CreditRequest>
+</GMF>
